@@ -1,7 +1,11 @@
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { Navigation } from "../common/Navigation/navigation";
 
 function App() {
   return (
-    null
+    <BrowserRouter>
+      <Navigation />
+    </BrowserRouter>
   );
 }
 
