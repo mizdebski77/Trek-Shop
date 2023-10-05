@@ -1,6 +1,6 @@
 import React from 'react';
 import { CartButton, FilterSelect, FilterTitle, FiltersWrapper, Option, Image, Price, ProducstNumber, ProductDescription, ProductName, ProductTile, ProductsWrapper, Title, Wrapper } from './styledProducts';
-import ex from '../../../common/Images/backpack.svg';
+import ex from '../../common/Images/backpack.svg';
 
 export const Products = () => {
 
@@ -23,7 +23,15 @@ export const Products = () => {
             </FiltersWrapper>
 
             <ProductsWrapper>
-                <ProductTile>
+                <ProductTile to='/product/:id'>
+                    <Image src={ex} />
+                    <ProductName>Queshua</ProductName>
+                    <ProductDescription>Hiking backpack queshua escape 16l</ProductDescription>
+                    <Price>40 €</Price>
+                    <CartButton>Add to cart</CartButton>
+                </ProductTile>
+
+                {/* <ProductTile>
                     <Image src={ex} />
                     <ProductName>Queshua</ProductName>
                     <ProductDescription>Hiking backpack queshua escape 16l</ProductDescription>
@@ -61,15 +69,7 @@ export const Products = () => {
                     <ProductDescription>Hiking backpack queshua escape 16l</ProductDescription>
                     <Price>40 €</Price>
                     <CartButton>Add to cart</CartButton>
-                </ProductTile>
-
-                <ProductTile>
-                    <Image src={ex} />
-                    <ProductName>Queshua</ProductName>
-                    <ProductDescription>Hiking backpack queshua escape 16l</ProductDescription>
-                    <Price>40 €</Price>
-                    <CartButton>Add to cart</CartButton>
-                </ProductTile>
+                </ProductTile> */}
 
             </ProductsWrapper>
         </Wrapper>

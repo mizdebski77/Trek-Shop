@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 export const Wrapper = styled.main`
@@ -67,13 +68,14 @@ export const ProductsWrapper = styled.div`
     gap: 40px;
 `;
 
-export const ProductTile = styled.div`
+export const ProductTile = styled(Link)`
     background: rgba(113, 113, 113, 0.13);
     display: grid;
     justify-content: center;
     gap: 20px;
     padding: 40px;
     transition: 0.3s;
+    text-decoration: none;
 
     &:hover {
         transform: scale(1.01);

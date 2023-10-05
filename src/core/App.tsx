@@ -2,7 +2,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Navigation } from "../common/Navigation/navigation";
 import { Home } from "../features/Home/home";
 import { Footer } from "../common/Footer/footer";
-import { Products } from "../features/Home/Products/products";
+import { Products } from "../features/Products/products";
 
 function App() {
   return (
