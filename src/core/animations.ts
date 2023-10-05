@@ -1,5 +1,3 @@
-import { keyframes } from "styled-components";
-
 
 export const openImage = {
     opacity: 1,
