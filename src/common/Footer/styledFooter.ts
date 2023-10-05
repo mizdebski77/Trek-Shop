@@ -46,6 +46,12 @@ export const ImagesWrapper = styled.div`
 export const SocialImg = styled.img`
     width: 40px;
     height: 40px;
+    transition: 0.3s;
+    cursor: pointer;
+    
+    &:hover {
+        transform: scale(1.08);
+    } ;
 `;
 
 export const FormWrapper = styled.div`
