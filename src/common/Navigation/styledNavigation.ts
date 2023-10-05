@@ -21,7 +21,6 @@ export const Wrapper = styled.nav`
 
 export const Logo = styled(Link)`
     color: #7E8B56;
-    font-family: Inter;
     font-size: 54px;
     font-style: normal;
     font-weight: 400;
@@ -61,7 +60,6 @@ export const LinksWrapper = styled.div`
 
 export const NavLink = styled(Link)`
     color: #475228;
-    font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;

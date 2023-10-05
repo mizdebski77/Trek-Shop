@@ -14,4 +14,5 @@ html {
 body {
   word-break: break-word;
   background: rgba(173, 173, 173, 0.2);
+  font-family: Inter;
 }`;

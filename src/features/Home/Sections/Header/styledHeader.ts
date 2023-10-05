@@ -17,7 +17,6 @@ export const Wrapper = styled.main`
 export const Title = styled.h1`
     color: #7E8B56;
     text-align: center;
-    font-family: Inter;
     font-size: 64px;
     font-style: normal;
     font-weight: 400;
@@ -28,7 +27,6 @@ export const Title = styled.h1`
 
 export const ShopSpan = styled.span`
     color: #676360;
-    font-family: Inter;
     font-size: 64px;
     font-style: normal;
     font-weight: 400;
@@ -37,7 +35,6 @@ export const ShopSpan = styled.span`
 
 export const Span = styled.p`
     color: #475228;
-    font-family: Inter;
     font-size: 50px;
     font-style: normal;
     font-weight: 400;

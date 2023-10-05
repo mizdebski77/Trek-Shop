@@ -8,7 +8,6 @@ export const Wrapper = styled.section`
 
 export const CatTitle = styled.h2`
     color: #000;
-    font-family: Inter;
     font-size: 32px;
     font-weight: 400;
 `;
