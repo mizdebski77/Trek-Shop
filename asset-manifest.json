@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/mizdebski77.github.io/Trek-Shop/static/js/main.1800c80f.js",
+    "static/js/787.da451c72.chunk.js": "/mizdebski77.github.io/Trek-Shop/static/js/787.da451c72.chunk.js",
+    "static/media/bg.mp4": "/mizdebski77.github.io/Trek-Shop/static/media/bg.111dec31ce64e6c6642c.mp4",
+    "static/media/tile.jpeg": "/mizdebski77.github.io/Trek-Shop/static/media/tile.fb8009688dbe6629cc45.jpeg",
+    "static/media/header.jpeg": "/mizdebski77.github.io/Trek-Shop/static/media/header.b4e47cafcd403f8daefb.jpeg",
+    "static/media/fb.svg": "/mizdebski77.github.io/Trek-Shop/static/media/fb.54570c13488893906588116d40dd677c.svg",
+    "static/media/insta.svg": "/mizdebski77.github.io/Trek-Shop/static/media/insta.844eb1b5601e3e9dfab026b4a426c1c8.svg",
+    "static/media/yt.svg": "/mizdebski77.github.io/Trek-Shop/static/media/yt.594a56e14d7021323ad498eb8df76d13.svg",
+    "static/media/accountSVG.svg": "/mizdebski77.github.io/Trek-Shop/static/media/accountSVG.61a281693721d0232e50e24fe21b08d8.svg",
+    "static/media/x.svg": "/mizdebski77.github.io/Trek-Shop/static/media/x.cc85de4c6028e04020c66222a7b935ad.svg",
+    "static/media/cartSVG.svg": "/mizdebski77.github.io/Trek-Shop/static/media/cartSVG.c949dc8cf4a7f3dc5821cc3c312602e7.svg",
+    "index.html": "/mizdebski77.github.io/Trek-Shop/index.html",
+    "main.1800c80f.js.map": "/mizdebski77.github.io/Trek-Shop/static/js/main.1800c80f.js.map",
+    "787.da451c72.chunk.js.map": "/mizdebski77.github.io/Trek-Shop/static/js/787.da451c72.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.1800c80f.js"
+  ]
+}
