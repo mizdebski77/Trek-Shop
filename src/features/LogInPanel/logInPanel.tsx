@@ -17,10 +17,8 @@ export const LogInPanel = () => {
                     <LogInButton>Log in</LogInButton>
                 </LogInContainer>
 
-                <div>
                     <NewAccount to='/Registration'>Create an account</NewAccount>
                     
-                </div>
 
             </LogInWrapper>
 
