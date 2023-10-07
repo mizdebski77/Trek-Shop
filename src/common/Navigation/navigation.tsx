@@ -36,12 +36,12 @@ export const Navigation = () => {
                 </LinksWrapper>
 
                 <IconsWrapper>
-                    <ImagesWrapper to='/cart'>
+                    <ImagesWrapper to='/Log-In'>
                         <SvgImage src={account} />
                         <Caption>Account</Caption>
                     </ImagesWrapper>
 
-                    <ImagesWrapper to='/cart'>
+                    <ImagesWrapper to='/Cart'>
                         <SvgImage src={cart} />
                         <Caption>Cart</Caption>
                     </ImagesWrapper>
