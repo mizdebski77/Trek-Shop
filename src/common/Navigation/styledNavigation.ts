@@ -90,10 +90,12 @@ export const IconsWrapper = styled.div`
     };
 `;
 
-export const ImagesWrapper = styled.a`
+export const ImagesWrapper = styled(Link)`
     cursor: pointer;
     display: grid;
     text-align: center;
+    color: black;
+    text-decoration: none;
 `;
 
 export const Caption = styled.span`

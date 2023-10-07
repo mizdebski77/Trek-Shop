@@ -36,12 +36,12 @@ export const Navigation = () => {
                 </LinksWrapper>
 
                 <IconsWrapper>
-                    <ImagesWrapper>
+                    <ImagesWrapper to='/cart'>
                         <SvgImage src={account} />
                         <Caption>Account</Caption>
                     </ImagesWrapper>
 
-                    <ImagesWrapper>
+                    <ImagesWrapper to='/cart'>
                         <SvgImage src={cart} />
                         <Caption>Cart</Caption>
                     </ImagesWrapper>
@@ -70,12 +70,12 @@ export const Navigation = () => {
                         </PhoneLinksWrapper>
 
                         <MobileIconsWrapper>
-                            <ImagesWrapper>
+                            <ImagesWrapper to='/cart'>
                                 <SvgImage src={account} />
                                 <Caption>Account</Caption>
                             </ImagesWrapper>
 
-                            <ImagesWrapper>
+                            <ImagesWrapper to='/cart'>
                                 <SvgImage src={cart} />
                                 <Caption>Cart</Caption>
                             </ImagesWrapper>

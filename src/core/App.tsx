@@ -4,6 +4,7 @@ import { Home } from "../features/Home/home";
 import { Footer } from "../common/Footer/footer";
 import { Products } from "../features/Products/products";
 import { Product } from "../features/Products/Product/product";
+import { Cart } from "../features/Cart/cart";
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <Route path={"*"} element={<Navigate replace to="/Home" />}> </Route>
         <Route path="/Hiking-backpacks" element={<Products />} />
         <Route path="/product/:id" element={<Product />} />
+        <Route path="/Cart" element={<Cart />} />
+
       </Routes>
       <Footer />
     </BrowserRouter>
