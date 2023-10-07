@@ -61,6 +61,7 @@ export const ProductTile = styled.div`
     padding: 40px 20px;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
+    max-height: 230px;
 `;
 
 export const TextWrapper = styled.div`
@@ -130,7 +131,7 @@ export const CountButton = styled.button`
 export const OrderSection = styled.div`
     background: #475228;
     padding: 20px;
-    max-height: 340px;
+    max-height: 334px;
     display: grid;
 `;
 
@@ -164,7 +165,17 @@ export const Discount = styled.button`
     font-size: 20px;
     background: none;
     border: none;
-    padding: 0;
+    padding: 20px 0;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        color: rgba(245, 245, 245, 0.8);
+    }
+
+    &:active {
+        color: rgba(245, 245, 245, 0.6);
+    }
 `;
 
 export const Sum = styled.span`

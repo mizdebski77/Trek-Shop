@@ -38,24 +38,6 @@ export const Cart = () => {
 
             <CartWrapper>
                 <ProductsWrapper>
-                    <ProductTile>
-                        <Image src={bp} />
-                        <TextWrapper>
-                            <ProductTitle>
-                                Lorem
-                            </ProductTitle>
-                            <ProductDescription>Hiking backpack escape 16l</ProductDescription>
-                            <ProductSize>Size: M</ProductSize>
-                            <PriceWrapper>
-                                <ProductPrice>40 €</ProductPrice>
-                                <ProductCount>
-                                    <CountButton>-</CountButton>
-                                    1
-                                    <CountButton>+</CountButton>
-                                </ProductCount>
-                            </PriceWrapper>
-                        </TextWrapper>
-                    </ProductTile>
 
                     <ProductTile>
                         <Image src={bp} />
@@ -75,6 +57,7 @@ export const Cart = () => {
                             </PriceWrapper>
                         </TextWrapper>
                     </ProductTile>
+                    
                 </ProductsWrapper>
 
                 <OrderSection>
