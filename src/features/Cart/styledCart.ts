@@ -2,7 +2,6 @@ import Slider from "react-slick";
 import { css, styled } from "styled-components";
 
 export const Wrapper = styled.section`
-
 `;
 
 export const InfoWrapper = styled.div`
