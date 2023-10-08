@@ -9,9 +9,9 @@ export const Home = () => {
     return (
         <Wrapper>
             <Header />
-           <Categories />
-            {/*  <VideoSection />
-            <Newsletter /> */}
+            <Categories />
+            <VideoSection />
+            {/*<Newsletter /> */}
         </Wrapper>
     );
 };

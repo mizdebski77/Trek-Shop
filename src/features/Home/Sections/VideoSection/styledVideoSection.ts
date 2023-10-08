@@ -23,6 +23,10 @@ export const TextWrapper = styled.div`
     background: rgba(255,255,255, 0.6);
     padding: 64px;
     position: absolute;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBP}px){
+        padding: 10px;
+    };
 `;
 
 export const Logo = styled.h3`
@@ -31,6 +35,10 @@ export const Logo = styled.h3`
     font-weight: 400;
     letter-spacing: 8.37px;
     margin: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 40px;
+    };
 `;
 
 export const LogoSpan = styled.span`
@@ -44,6 +52,10 @@ export const Caption = styled.h4`
     font-weight: 400;
     letter-spacing: 2.7px;
     margin: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 24px;
+    };
 `;
 
 export const ButtonLink = styled(Link)`
@@ -51,11 +63,17 @@ export const ButtonLink = styled(Link)`
     margin: 20px auto 0;
     max-width: 200px;
     color: #FFF;
-    font-size: 36px;
+    font-size: 28px;
     text-decoration: none;
     border-radius: 10px;
     background: #7E8B56;
     transition: 0.4s;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 10px auto 0;
+    };
 
     &:hover{
         transform: scale(1.03);

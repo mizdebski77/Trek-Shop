@@ -15,9 +15,10 @@ export const Wrapper = styled.main`
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         padding: 10px;
-        align-items: end;
-        box-shadow: 0px -200px 68px -15px rgba(245, 245, 245, 0.89) inset; 
+        align-items: center;
+        box-shadow: none; 
         justify-content: center;
+        height: 360px;
     };
 `;
 
@@ -29,9 +30,10 @@ export const Title = styled.h1`
     font-weight: 400;
     margin: 0;
     letter-spacing: 12.8px;
-    
+
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         font-size: 40px;
+        background:  rgba(245, 245, 245, 0.6);
     };
 `;
 
