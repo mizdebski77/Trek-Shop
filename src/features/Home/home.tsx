@@ -11,7 +11,7 @@ export const Home = () => {
             <Header />
             <Categories />
             <VideoSection />
-            {/*<Newsletter /> */}
+            <Newsletter /> 
         </Wrapper>
     );
 };
