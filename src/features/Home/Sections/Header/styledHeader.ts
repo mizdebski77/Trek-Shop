@@ -17,6 +17,7 @@ export const Wrapper = styled.main`
         padding: 10px;
         align-items: end;
         box-shadow: 0px -200px 68px -15px rgba(245, 245, 245, 0.89) inset; 
+        justify-content: center;
     };
 `;
 

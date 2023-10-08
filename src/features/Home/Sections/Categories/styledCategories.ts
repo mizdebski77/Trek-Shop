@@ -10,16 +10,27 @@ export const CatTitle = styled.h2`
     color: #000;
     font-size: 32px;
     font-weight: 400;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 24px;
+    };
 `;
 
 export const TilesWrapper = styled.div`
+    max-width: 1600px;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    };
 `;
 
 export const Tile = styled.div`
-    width: 320px;
-    height: 320px;
+    max-width: 320px;
     position: relative; 
     border: 2px solid #475228;
 `;
@@ -33,10 +44,11 @@ export const TileImage = styled.img`
     cursor: pointer;
     transition: 0.3s linear;
     transition-timing-function:ease-in-out;
+    transform: scale(1.03);
 
     &:hover {
         zoom: normal;
-        transform: scale(1.05);
+        transform: scale(1.08);
     };
 `;
 
@@ -49,4 +61,8 @@ export const TileCaption = styled.span`
     width: 100%; 
     text-align: center; 
     font-size: 28px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
+    };
 `;
