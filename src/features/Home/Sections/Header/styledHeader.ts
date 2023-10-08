@@ -12,6 +12,12 @@ export const Wrapper = styled.main`
     display: flex;
     align-items: center;
     padding: 40px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        padding: 10px;
+        align-items: end;
+        box-shadow: 0px -200px 68px -15px rgba(245, 245, 245, 0.89) inset; 
+    };
 `;
 
 export const Title = styled.h1`
@@ -20,29 +26,29 @@ export const Title = styled.h1`
     font-size: 64px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
     margin: 0;
     letter-spacing: 12.8px;
     
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
-        font-size: 32px;
+        font-size: 40px;
     };
 `;
 
 export const ShopSpan = styled.span`
     color: #676360;
-    font-size: 64px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
 `;
 
 export const Span = styled.p`
     color: #475228;
     font-size: 50px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
     letter-spacing: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 32px;
+        margin: 10px 0;
+    };
 `;
 
