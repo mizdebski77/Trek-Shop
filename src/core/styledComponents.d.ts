@@ -6,8 +6,8 @@ declare module 'styled-components' {
 
         }
         breakPoint: {
-            paddingBP: number,
-            navBP: number,
+            firstBP: number,
+            secondBP: number,
             mobileBP: number,
             // secondBreakPoint: number,
             // mobileMax: number

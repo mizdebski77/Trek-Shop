@@ -6,17 +6,39 @@ export const Wrapper = styled.footer`
     border-top: 2px solid #676360;
     padding: 80px;
     text-align: center;
+    
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
+        padding: 40px;
+    };
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        padding: 20px;
+    };
 `;
 
 export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 80px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
+        grid-template-columns: none;
+        gap: 80px;
+        margin-bottom: 40px;
+    };
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        gap: 28px;
+    };
 `;
 
 export const Title = styled.span`
     font-size: 32px;
     text-align: center;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 24px;
+    };
 `;
 
 export const LinksWrapper = styled.div`
@@ -29,6 +51,10 @@ export const FooterLink = styled(Link)`
     font-size: 20px;
     color: #475228;
     text-decoration: none;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 14px;
+    };
 `;
 
 export const SocialsWrapper = styled.div`
@@ -36,6 +62,10 @@ export const SocialsWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 20px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        gap: 10px;
+    };
 `;
 
 export const ImagesWrapper = styled.div`
@@ -51,13 +81,22 @@ export const SocialImg = styled.img`
     
     &:hover {
         transform: scale(1.08);
-    } ;
+    };
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        width: 24px;
+        height: 24px;
+    };
 `;
 
 export const FormWrapper = styled.div`
     display: grid;
     justify-content: center;
     gap: 20px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        gap: 10px;
+    };
 `;
 
 export const FooterForm = styled.form`
@@ -72,7 +111,12 @@ export const FooterInput = styled.input`
 
     &:focus {
         outline: none;
-    }
+    };
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
+        padding: 10px;
+    };
 `;
 
 export const FooterButton = styled.button`
@@ -82,12 +126,22 @@ export const FooterButton = styled.button`
     padding: 16px;
     font-size: 20px;
     cursor: pointer;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
+        padding: 10px;
+    };
 `;
 
 export const CheckBoxWrapper = styled.div`
     display: flex;
     max-width: 320px;
     gap: 20px;
+    
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        max-width: 260px;
+        gap: 10px;
+    };
 `;
 
 export const FooterCheckBox = styled.input`
@@ -97,6 +151,10 @@ export const FooterCheckBox = styled.input`
 export const CheckboxText = styled.span`
     font-size: 20px;
     text-align: left;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
+    };
 `;
 
 export const Logo = styled(Link)`
@@ -107,6 +165,10 @@ export const Logo = styled(Link)`
     line-height: normal;
     letter-spacing: 8.37px;
     text-decoration: none;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 36px;
+    };
 `;
 
 export const LogoSpan = styled.span`

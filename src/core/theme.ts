@@ -4,8 +4,8 @@ export const theme = {
     },
 
     breakPoint: {
-        paddingBP: 1410,
-        navBP: 1180,
+        firstBP: 1410,
+        secondBP: 1180,
         mobileBP:767,
     }
 };

@@ -11,7 +11,7 @@ export const Wrapper = styled.nav`
     z-index: 10; 
     top:0;
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.paddingBP}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBP}px){
         padding: 20px;
     };
 
@@ -50,11 +50,11 @@ export const LinksWrapper = styled.div`
     align-items: center;
     gap: 80px;
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.paddingBP}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBP}px){
         gap: 40px;
     };
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.navBP}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
         display: none;
     };
 `;
@@ -70,12 +70,12 @@ export const NavLink = styled(Link)`
     &:hover{
         transform: translateY(-5px);
 
-        @media (max-width: ${({ theme }) => theme.breakPoint.navBP}px){
+        @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
             transform: scale(1);
         };
     };
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.navBP}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
         color: white;
     };
 `;
@@ -85,7 +85,7 @@ export const IconsWrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     gap: 40px;
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.navBP}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
         display: none;
     };
 `;
@@ -108,7 +108,7 @@ export const SvgImage = styled.img`
 `;
 
 export const PhoneNavbar = styled.div`
-    @media (min-width: ${({ theme }) => theme.breakPoint.navBP}px){
+    @media (min-width: ${({ theme }) => theme.breakPoint.secondBP}px){
         display: none;
     };
 `;

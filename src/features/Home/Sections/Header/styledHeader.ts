@@ -23,6 +23,10 @@ export const Title = styled.h1`
     line-height: normal;
     margin: 0;
     letter-spacing: 12.8px;
+    
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 32px;
+    };
 `;
 
 export const ShopSpan = styled.span`
