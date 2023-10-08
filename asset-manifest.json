@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Trek-Shop/static/css/main.03060ed7.css",
-    "main.js": "/Trek-Shop/static/js/main.29298956.js",
+    "main.js": "/Trek-Shop/static/js/main.c072d719.js",
     "static/js/787.da451c72.chunk.js": "/Trek-Shop/static/js/787.da451c72.chunk.js",
     "static/media/bg.mp4": "/Trek-Shop/static/media/bg.111dec31ce64e6c6642c.mp4",
-    "static/media/accesories.jpg": "/Trek-Shop/static/media/accesories.621cdbec9302587415f7.jpg",
-    "static/media/shoes.jpg": "/Trek-Shop/static/media/shoes.095b7ccf63028edd0f26.jpg",
-    "static/media/backpacks.jpg": "/Trek-Shop/static/media/backpacks.55133dcd5ee154ce29fa.jpg",
-    "static/media/clothes.jpg": "/Trek-Shop/static/media/clothes.99fb5d0749c893e8dd9f.jpg",
+    "static/media/accesories.jpg": "/Trek-Shop/static/media/accesories.f373d586e7496fdea42c.jpg",
+    "static/media/shoes.jpg": "/Trek-Shop/static/media/shoes.6b3a8d2b50d3d1f5f91d.jpg",
+    "static/media/backpacks.jpg": "/Trek-Shop/static/media/backpacks.ccd665a14c2c0bd587a7.jpg",
+    "static/media/clothes.jpg": "/Trek-Shop/static/media/clothes.a01d9ecce6d02f9e1567.jpg",
     "static/media/backpack.svg": "/Trek-Shop/static/media/backpack.48e1ae676dcf480151bc58138870ccb9.svg",
     "static/media/header.jpeg": "/Trek-Shop/static/media/header.b4e47cafcd403f8daefb.jpeg",
     "static/media/fb.svg": "/Trek-Shop/static/media/fb.54570c13488893906588116d40dd677c.svg",
@@ -22,11 +22,11 @@
     "static/media/slick.woff": "/Trek-Shop/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Trek-Shop/index.html",
     "main.03060ed7.css.map": "/Trek-Shop/static/css/main.03060ed7.css.map",
-    "main.29298956.js.map": "/Trek-Shop/static/js/main.29298956.js.map",
+    "main.c072d719.js.map": "/Trek-Shop/static/js/main.c072d719.js.map",
     "787.da451c72.chunk.js.map": "/Trek-Shop/static/js/787.da451c72.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.03060ed7.css",
-    "static/js/main.29298956.js"
+    "static/js/main.c072d719.js"
   ]
 }
