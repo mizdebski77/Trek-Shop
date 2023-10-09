@@ -125,8 +125,7 @@ export const PhoneNavbar = styled.div`
 export const MobileLinksWrapper = styled.div`
     background: #7E8B56;
     position: fixed;
-    width: 50%;
-    height: 90%;
+    width: 100%;
     z-index: 1;
     display: flex;
     flex-direction: column;
