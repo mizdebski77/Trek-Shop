@@ -7,7 +7,7 @@ export const Products = () => {
     return (
         <Wrapper>
             <Title>Hiking backpacks<ProducstNumber> (54 offers)</ProducstNumber> </Title>
-            <FiltersWrapper>
+            {/* <FiltersWrapper>
                 <FilterTitle>Filters</FilterTitle>
                 <FilterSelect >
                     <Option value="" disabled selected>Sort</Option>
@@ -20,7 +20,7 @@ export const Products = () => {
                     <Option>Male</Option>
                     <Option>Female</Option>
                 </FilterSelect>
-            </FiltersWrapper>
+            </FiltersWrapper> */}
 
             <ProductsWrapper>
                 <ProductTile to='/product/:id'>
@@ -30,6 +30,48 @@ export const Products = () => {
                     <Price>40 €</Price>
                     <CartButton>Add to cart</CartButton>
                 </ProductTile>
+
+                <ProductTile to='/product/:id'>
+                    <Image src={ex} />
+                    <ProductName>Queshua</ProductName>
+                    <ProductDescription>Hiking backpack queshua escape 16l</ProductDescription>
+                    <Price>40 €</Price>
+                    <CartButton>Add to cart</CartButton>
+                </ProductTile>
+
+                <ProductTile to='/product/:id'>
+                    <Image src={ex} />
+                    <ProductName>Queshua</ProductName>
+                    <ProductDescription>Hiking backpack queshua escape 16l</ProductDescription>
+                    <Price>40 €</Price>
+                    <CartButton>Add to cart</CartButton>
+                </ProductTile>
+
+                <ProductTile to='/product/:id'>
+                    <Image src={ex} />
+                    <ProductName>Queshua</ProductName>
+                    <ProductDescription>Hiking backpack queshua escape 16l</ProductDescription>
+                    <Price>40 €</Price>
+                    <CartButton>Add to cart</CartButton>
+                </ProductTile>
+
+                <ProductTile to='/product/:id'>
+                    <Image src={ex} />
+                    <ProductName>Queshua</ProductName>
+                    <ProductDescription>Hiking backpack queshua escape 16l</ProductDescription>
+                    <Price>40 €</Price>
+                    <CartButton>Add to cart</CartButton>
+                </ProductTile>
+
+                <ProductTile to='/product/:id'>
+                    <Image src={ex} />
+                    <ProductName>Queshua</ProductName>
+                    <ProductDescription>Hiking backpack queshua escape 16l</ProductDescription>
+                    <Price>40 €</Price>
+                    <CartButton>Add to cart</CartButton>
+                </ProductTile>
+
+                
 
                 {/* <ProductTile>
                     <Image src={ex} />

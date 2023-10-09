@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 
 export const Wrapper = styled.main`
     min-height: 100vh;
+    padding: 10px;
 `;
 
 export const Title = styled.h1`
@@ -13,6 +14,10 @@ export const Title = styled.h1`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 24px;
+    };
 `;
 
 export const ProducstNumber = styled.span`
@@ -21,6 +26,10 @@ export const ProducstNumber = styled.span`
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
+    };
 `;
 
 export const FiltersWrapper = styled.div`
@@ -66,6 +75,15 @@ export const ProductsWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
+        grid-template-columns: 1fr 1fr;
+    };
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        gap: 12px;
+        grid-template-columns: 1fr;
+    };
 `;
 
 export const ProductTile = styled(Link)`
@@ -73,7 +91,7 @@ export const ProductTile = styled(Link)`
     display: grid;
     justify-content: center;
     gap: 20px;
-    padding: 40px;
+    padding: 40px 20px;
     transition: 0.3s;
     text-decoration: none;
 
@@ -82,11 +100,23 @@ export const ProductTile = styled(Link)`
         box-shadow: 0px 4px 4px 0px #7E8B56;
         cursor: pointer;
     };
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        gap: 12px;
+        max-width: 320px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+    };
 `;
 
 export const Image = styled.img`
-    width: 320px;
-    height: 320px;
+    max-width: 320px;
+    margin: 0 auto;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        max-width: 140px;
+    };
 `;
 
 export const ProductName = styled.h3`
@@ -95,6 +125,10 @@ export const ProductName = styled.h3`
     font-size: 28px;
     font-weight: 400;
     margin: 0;
+    
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 24px;
+    };
 `;
 
 export const ProductDescription = styled.span`
@@ -102,6 +136,10 @@ export const ProductDescription = styled.span`
     text-align: center;
     font-size: 20px;
     font-weight: 400;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
+    };
 `;
 
 export const Price = styled.h4`
@@ -110,6 +148,10 @@ export const Price = styled.h4`
     font-size: 32px;
     font-weight: 400;
     margin: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 24px;
+    };
 `;
 
 export const CartButton = styled.button`
@@ -129,5 +171,9 @@ export const CartButton = styled.button`
 
     &:active {
         background: rgba(71, 82, 40, 0.45);
+    };
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
     };
 `;
