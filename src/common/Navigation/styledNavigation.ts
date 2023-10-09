@@ -31,7 +31,7 @@ export const Logo = styled(Link)`
     text-decoration: none;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
-        font-size: 32px;
+        font-size: 24px;
     };
 `;
 
@@ -77,6 +77,7 @@ export const NavLink = styled(Link)`
 
     @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
         color: white;
+        font-size: 16px;
     };
 `;
 
@@ -100,11 +101,19 @@ export const ImagesWrapper = styled(Link)`
 
 export const Caption = styled.span`
     font-size: 14px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 12px;
+    };
 `;
 
 export const SvgImage = styled.img`
     width: 40px;
     margin: 0 auto;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        width: 32px;
+    };
 `;
 
 export const PhoneNavbar = styled.div`
@@ -131,7 +140,7 @@ export const PhoneLinksWrapper = styled.div`
     justify-content: center;
     align-items: center;
     color: white;
-    padding: 20px;
+    padding: 20px 10px;
 `;
 
 export const MobileIconsWrapper = styled.div`
@@ -139,5 +148,5 @@ export const MobileIconsWrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     background: #e8e8e8;
-    padding: 20px;
+    padding: 20px 10px;
 `;

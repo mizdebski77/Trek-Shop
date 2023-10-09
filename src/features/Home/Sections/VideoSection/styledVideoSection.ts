@@ -37,7 +37,7 @@ export const Logo = styled.h3`
     margin: 0;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
-        font-size: 40px;
+        font-size: 32px;
     };
 `;
 

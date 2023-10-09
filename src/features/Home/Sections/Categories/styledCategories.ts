@@ -13,6 +13,7 @@ export const CatTitle = styled.h2`
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         font-size: 24px;
+        margin: 10px 0;
     };
 `;
 

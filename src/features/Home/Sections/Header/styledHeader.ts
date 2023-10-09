@@ -30,9 +30,10 @@ export const Title = styled.h1`
     font-weight: 400;
     margin: 0;
     letter-spacing: 12.8px;
+    padding: 20px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
-        font-size: 40px;
+        font-size: 32px;
         background:  rgba(245, 245, 245, 0.6);
     };
 `;
@@ -50,7 +51,7 @@ export const Span = styled.p`
     letter-spacing: 0;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
-        font-size: 32px;
+        font-size: 20px;
         margin: 10px 0;
     };
 `;

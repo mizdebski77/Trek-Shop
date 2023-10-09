@@ -20,15 +20,16 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 80px;
+    padding: 20px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
         grid-template-columns: none;
         gap: 80px;
-        margin-bottom: 40px;
+        margin-bottom: 88px;
     };
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
-        gap: 28px;
+        gap: 40px;
     };
 `;
 
@@ -137,6 +138,8 @@ export const CheckBoxWrapper = styled.div`
     display: flex;
     max-width: 320px;
     gap: 20px;
+    height: 13px;
+    justify-content: center;
     
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         max-width: 260px;
@@ -153,7 +156,7 @@ export const CheckboxText = styled.span`
     text-align: left;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
-        font-size: 16px;
+        font-size: 12px;
     };
 `;
 
@@ -162,7 +165,6 @@ export const Logo = styled(Link)`
     font-size: 54px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
     letter-spacing: 8.37px;
     text-decoration: none;
 
