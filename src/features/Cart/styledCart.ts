@@ -6,40 +6,61 @@ export const Wrapper = styled.section`
 
 export const InfoWrapper = styled.div`
     max-width: 1400px;
+    padding: 10px;
     margin: 40px auto;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        margin: 10px auto;
+    };
 `;
 
 export const NumberWrapper = styled.div`
     display: flex;
     align-items: center;
     gap: 10px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        flex-direction: column;
+        min-width: 56px;
+        margin: 20px auto;
+    };
 `;
 
 export const Number = styled.div <{ inactive?: boolean }>`
     color: #FFF;
     text-align: center;
-    font-size: 64px;
+    font-size: 52px;
     font-weight: 400;
     background: #7E8B56;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
 
     ${({ inactive }) => inactive && css`
         background: rgba(173, 173, 173, 0.89);
     `};
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size:24px;
+        height:30px;
+        width:30px
+    };
 `;
 
 export const NumberCaption = styled.div`
     color: #475228;
     text-align: center;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 400;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
+    };
 `;
 
 export const CartWrapper = styled.div`
@@ -48,6 +69,10 @@ export const CartWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        grid-template-columns: 1fr;
+    };
 `;
 
 export const ProductsWrapper = styled.div`
@@ -61,6 +86,10 @@ export const ProductTile = styled.div`
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     max-height: 230px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        padding: 20px;
+    };
 `;
 
 export const TextWrapper = styled.div`
@@ -71,6 +100,11 @@ export const TextWrapper = styled.div`
 export const Image = styled.img`
     max-width: 140px;
     margin: 0 auto;
+    width: 100%;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        max-width: 100px;
+    };
 `;
 
 export const ProductTitle = styled.h2`
@@ -78,6 +112,10 @@ export const ProductTitle = styled.h2`
     font-size: 32px;
     font-weight: 400;
     margin: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 24px;
+    };
 `;
 
 export const ProductDescription = styled.h3`
@@ -85,6 +123,10 @@ export const ProductDescription = styled.h3`
     font-size: 20px;
     font-weight: 400;
     margin: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
+    };
 `;
 
 export const ProductSize = styled.h4`
@@ -92,6 +134,10 @@ export const ProductSize = styled.h4`
     font-size: 16px;
     font-weight: 400;
     margin: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 12px;
+    };
 `;
 
 export const PriceWrapper = styled.div`
@@ -99,6 +145,10 @@ export const PriceWrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     max-width: 70%;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
+        max-width: 100%;
+    };
 `;
 
 export const ProductPrice = styled.h5`
@@ -106,6 +156,10 @@ export const ProductPrice = styled.h5`
     font-size: 24px;
     font-weight: 400;
     margin: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 20px;
+    };
 `;
 
 export const ProductCount = styled.div`
@@ -124,7 +178,11 @@ export const CountButton = styled.button`
 
     &:hover {
         background: rgba(126, 139, 86, 0.32);
-    }
+    };
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
+    };
 `;
 
 export const OrderSection = styled.div`
@@ -144,18 +202,30 @@ export const OrderTitle = styled.h1`
     font-size: 32px;
     font-weight: 400;
     margin: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 24px;
+    };
 `;
 
 export const CostsWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        padding: 10px 0;
+    };
 `;
 
 export const Value = styled.span`
     color: #FFF;
     text-align: center;
     font-size: 20px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
+    };
 `;
 
 export const Discount = styled.button`
@@ -174,13 +244,22 @@ export const Discount = styled.button`
 
     &:active {
         color: rgba(245, 245, 245, 0.6);
-    }
+    };
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
+        padding: 10px 0;
+    };
 `;
 
 export const Sum = styled.span`
     color: #FFF;
     text-align: center;
     font-size: 28px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 24px;
+    };
 `;
 
 export const NextButton = styled.button`
@@ -200,23 +279,52 @@ export const NextButton = styled.button`
     &:active {
         background: rgba(255, 255, 255,0.75);
     };
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
+    };
 `;
 
 export const SimilarProducts = styled.div`
     max-width: 1400px;
     margin: 64px auto;
+    width: 100%;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
+        padding: 10px;
+        margin: 32px auto;
+    };
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        margin: 20px auto;
+    };
 `;
 
 export const SimilarTitle = styled.span`
     color: #000;
     font-size: 32px;
     font-weight: 400;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 24px;
+        margin: 10px 0;
+    };
 `;
 
 export const SimilarSwiper = styled(Slider)`
     max-width: 1400px;
     margin: 0 auto;
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBP}px){
+        max-width: 1000px;
+    };
 
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
+        max-width: 800px;
+    };
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        max-width: 280px;
+    };
     .slick-slide {
         display: grid;
         justify-content: center;
@@ -226,6 +334,10 @@ export const SimilarSwiper = styled(Slider)`
     .slick-next:before {
       color: #475228;
       font-size: 28px;
+
+      @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+            font-size: 20px;
+        };
     }
 `;
 
@@ -234,8 +346,13 @@ export const TileWrapper = styled.div`
 `;
 
 export const TileImg = styled.img`
-    width: 200px;
+    max-width: 200px;
+    width: 100%;
     margin: 0 auto;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        max-width: 140px;
+    };
 `;
 
 export const TileTitle = styled.span`
@@ -243,12 +360,21 @@ export const TileTitle = styled.span`
     text-align: center;
     font-size: 28px;
     font-weight: 400;
+    
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 20px;
+    };
 `;
 
 export const TileDesc = styled.span`
     color: #000;
     text-align: center;
     font-size: 20px;
+    font-weight: 400;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
+    };
 `;
 
 export const TilePrice = styled.span`
@@ -256,6 +382,10 @@ export const TilePrice = styled.span`
     text-align: center;
     font-size: 32px;
     font-weight: 400;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 24px;
+    };
 `;
 
 export const TileButton = styled.button`
@@ -274,6 +404,11 @@ export const TileButton = styled.button`
     &:active {
         background: rgba(71, 82, 40, 0.51);
     };
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
+        padding: 4px;
+    };
 `;
 
 export const Tile = styled.div`
@@ -287,5 +422,9 @@ export const Tile = styled.div`
 
     &:hover {
         background: rgba(113, 113, 113, 0.13);
-    }
+    };
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        padding: 20px;
+    };
 `;

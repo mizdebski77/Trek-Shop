@@ -10,6 +10,22 @@ export const Cart = () => {
         speed: 1000,
         slidesToShow: 3,
         slidesToScroll: 1,
+
+        responsive: [
+            {
+                breakpoint: 1180,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
 
     return (
@@ -57,7 +73,7 @@ export const Cart = () => {
                             </PriceWrapper>
                         </TextWrapper>
                     </ProductTile>
-                    
+
                 </ProductsWrapper>
 
                 <OrderSection>
