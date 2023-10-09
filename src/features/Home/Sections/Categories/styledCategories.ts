@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 export const Wrapper = styled.section`
@@ -30,7 +31,7 @@ export const TilesWrapper = styled.div`
     };
 `;
 
-export const Tile = styled.div`
+export const Tile = styled(Link)`
     max-width: 320px;
     position: relative; 
     border: 2px solid #475228;

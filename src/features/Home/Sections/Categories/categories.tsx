@@ -8,7 +8,7 @@ export const Categories = () => {
             <CatTitle>Categories</CatTitle>
             <TilesWrapper>
                 {tilesData.map((tile, index) => (
-                    <Tile key={index}>
+                    <Tile to={tile.link} key={index}>
                         <Pics>
                             <TileImage src={tile.src} />
                         </Pics>

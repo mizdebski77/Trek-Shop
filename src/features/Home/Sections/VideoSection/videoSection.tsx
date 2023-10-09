@@ -9,7 +9,7 @@ export const VideoSection = () => {
             <TextWrapper>
                 <Logo>TREK<LogoSpan>Shop</LogoSpan></Logo>
                 <Caption>Join the group of satisfied customers </Caption>
-                <ButtonLink to='/accesories' >Join Us</ButtonLink>
+                <ButtonLink to='/Log-In' >Join Us</ButtonLink>
             </TextWrapper>
         </Wrapper>
     );

@@ -22,7 +22,7 @@ export const Navigation = () => {
     return (
         <>
             <Wrapper>
-                <Logo to='/Hiking-backpacks'>TREK<LogoSpan>Shop</LogoSpan></Logo>
+                <Logo to='/Home'>TREK<LogoSpan>Shop</LogoSpan></Logo>
                 <PhoneNavbar onClick={togglePhoneNavbar}>
                     <Hamburger color='#7E8B56' size={28} />
                 </PhoneNavbar>
