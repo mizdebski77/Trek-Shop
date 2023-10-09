@@ -6,14 +6,11 @@ import cart from '../Images/cartSVG.svg';
 import Hamburger from 'hamburger-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { mobileNavAnimation } from '../../core/animations';
+import { scrollTop } from '../../core/scrollTop';
 
 export const Navigation = () => {
 
     const [phoneNavbar, setPhoneNavbar] = useState(false);
-
-    const scrollTop = () => (
-        window.scrollTo(0, 0)
-    );
 
     const togglePhoneNavbar = () => {
         setPhoneNavbar(!phoneNavbar);
@@ -22,14 +19,14 @@ export const Navigation = () => {
     return (
         <>
             <Wrapper>
-                <Logo to='/Home'>TREK<LogoSpan>Shop</LogoSpan></Logo>
+                <Logo to='/Home' onClick={() => scrollTop()}>TREK<LogoSpan>Shop</LogoSpan></Logo>
                 <PhoneNavbar onClick={togglePhoneNavbar}>
                     <Hamburger color='#7E8B56' size={28} />
                 </PhoneNavbar>
 
                 <LinksWrapper>
                     {links.map((link, index) => (
-                        <NavLink key={index} to={link.link} onClick={() => scrollTop}>
+                        <NavLink key={index} to={link.link} onClick={() => scrollTop()}>
                             {link.text}
                         </NavLink>
                     ))}

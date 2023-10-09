@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SimilarProducts, SimilarTitle, SimilarSwiper, TileWrapper, Tile, TileImg, TileTitle, TileDesc, TilePrice, TileButton, Wrapper, InfoWrapper, NumberWrapper, Number, NumberCaption, CartWrapper, ProductsWrapper, ProductTile, Image, OrderSection, TextWrapper, ProductTitle, ProductDescription, ProductSize, PriceWrapper, ProductPrice, ProductCount, CountButton, OrderTitle, CostsWrapper, Value, Discount, OrderContainer, Sum, NextButton } from './styledCart';
 import bp from '../../common/Images/backpack.svg';
 
 export const Cart = () => {
+
+    const [counter, setCounter] = useState(1);
 
     const settings = {
         dots: true,
@@ -27,6 +29,15 @@ export const Cart = () => {
             },
         ],
     };
+
+    const addItem = () => {
+        setCounter(counter + 1);
+    };
+
+    const removeItem = () => {
+        setCounter(counter - 1);
+    };
+
 
     return (
         <Wrapper>
@@ -66,9 +77,9 @@ export const Cart = () => {
                             <PriceWrapper>
                                 <ProductPrice>40 €</ProductPrice>
                                 <ProductCount>
-                                    <CountButton>-</CountButton>
-                                    1
-                                    <CountButton>+</CountButton>
+                                    <CountButton onClick={() => removeItem()}>-</CountButton>
+                                    {counter}
+                                    <CountButton onClick={() => addItem()}>+</CountButton>
                                 </ProductCount>
                             </PriceWrapper>
                         </TextWrapper>

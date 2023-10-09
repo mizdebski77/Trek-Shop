@@ -1,6 +1,7 @@
 import React from 'react';
 import { ButtonLink, Caption, Logo, LogoSpan, TextWrapper, Video, Wrapper } from './styledVideoSection';
 import bgvideo from '../../../../common/Videos/bg.mp4';
+import { scrollTop } from '../../../../core/scrollTop';
 
 export const VideoSection = () => {
     return (
@@ -9,7 +10,7 @@ export const VideoSection = () => {
             <TextWrapper>
                 <Logo>TREK<LogoSpan>Shop</LogoSpan></Logo>
                 <Caption>Join the group of satisfied customers </Caption>
-                <ButtonLink to='/Log-In' >Join Us</ButtonLink>
+                <ButtonLink to='/Log-In' onClick={() => scrollTop()} >Join Us</ButtonLink>
             </TextWrapper>
         </Wrapper>
     );
