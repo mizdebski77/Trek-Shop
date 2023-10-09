@@ -36,6 +36,7 @@ export const Container = styled.div`
 export const Title = styled.span`
     font-size: 32px;
     text-align: center;
+    color: #475228;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         font-size: 24px;
@@ -50,7 +51,7 @@ export const LinksWrapper = styled.div`
 
 export const FooterLink = styled(Link)`
     font-size: 20px;
-    color: #475228;
+    color: black;
     text-decoration: none;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
