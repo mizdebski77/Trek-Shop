@@ -113,7 +113,7 @@ export const Cart = () => {
                 <SimilarSwiper {...settings}>
                     <TileWrapper>
                         <Tile>
-                            <TileImg src={bp} />
+                            <TileImg src={} />
                             <TileTitle>Lorem</TileTitle>
                             <TileDesc>Hiking backpack queshua escape 16l</TileDesc>
                             <TilePrice>40 €</TilePrice>
