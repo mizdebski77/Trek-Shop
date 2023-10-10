@@ -3,8 +3,17 @@ import { About, Button, ShortDescriptionWrapper, Image, Price, PriceCartWrapper,
 import bp from '../../../common/Images/backpack.svg';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useDispatch } from "react-redux";
+import { addProduct } from '../../Cart/cartSlice';
 
 export const Product = () => {
+    const product = {
+        id: 1,
+        title: "Lorem",
+        price: 40,
+    };
+    
+    const dispatch = useDispatch();
 
     const settings1 = {
         customPaging: function () {
@@ -42,7 +51,8 @@ export const Product = () => {
                 },
             },
         ],
-    }
+    };
+
 
     return (
         <Wrapper>
@@ -53,20 +63,23 @@ export const Product = () => {
                     <Image src={bp} />
                     <Image src={bp} />
                     <Image src={bp} />
-
                 </CustomSlider>
+
                 <TextWrapper>
                     <Title>Lorem</Title>
                     <About>Hiking backpack escape 16l</About>
                     <PriceCartWrapper>
                         <Price>40 €</Price>
-                        <Button>Add to cart</Button>
+                        <Button
+                            onClick={() => dispatch(addProduct(product))}
+                        >Add to cart</Button>
                     </PriceCartWrapper>
                     <ShortDescriptionWrapper>
                         <ShortDescription>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the.</ShortDescription>
                         <ReadMore to='/xd'>Read More</ReadMore>
                     </ShortDescriptionWrapper>
                 </TextWrapper>
+
             </ProductTile>
             <SimilarProducts>
                 <SimilarTitle>Similar items</SimilarTitle>
