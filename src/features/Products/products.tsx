@@ -16,9 +16,12 @@ export const Products = () => {
     const titleArray = parts[3];
     const title = decodeURIComponent(titleArray.replace(/\+/g, ' ')) .replace(/[\/-]/g, ' ');
 
+    console.log(data);
+    
+
     return (
         <Wrapper>
-            <Title>{title} <ProducstNumber> ({data.backpacks.length} offers)</ProducstNumber> </Title>
+            <Title>Hiking {title} <ProducstNumber> ( offers)</ProducstNumber> </Title>
             {/* <FiltersWrapper>
                 <FilterTitle>Filters</FilterTitle>
                 <FilterSelect >

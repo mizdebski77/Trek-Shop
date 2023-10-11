@@ -1,7 +1,7 @@
 export const links = [
-    { text: 'Hiking backpacks', link: '/Hiking-backpacks' },
-    { text: 'Tourist clothing', link: '/Tourist-clothing' },
-    { text: 'Hiking shoes', link: '/Hiking-shoes' },
+    { text: 'Hiking backpacks', link: '/Backpacks' },
+    { text: 'Hiking clothes', link: '/Clothes' },
+    { text: 'Hiking shoes', link: '/Shoes' },
     { text: 'Accessories', link: '/Accessories' },
 ];
 

@@ -178,8 +178,6 @@ const products = {
         },
     ],
 
-
-
     clothes: [
         {
             id: generateId(),
