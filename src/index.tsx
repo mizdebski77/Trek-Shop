@@ -6,6 +6,7 @@ import { theme } from './core/theme';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './core/globalStyles';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -17,6 +18,7 @@ root.render(
   <QueryClientProvider client={queryClient}>
     <ThemeProvider theme={theme} >
       <GlobalStyles />
+      <ReactQueryDevtools />
       <App />
     </ThemeProvider >
   </QueryClientProvider>

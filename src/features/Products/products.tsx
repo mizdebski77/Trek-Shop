@@ -3,10 +3,11 @@ import { CartButton, FilterSelect, FilterTitle, FiltersWrapper, Option, Image, P
 import ex from '../../common/Images/backpack.svg';
 import { useQuery } from '@tanstack/react-query';
 import { fetchProducts } from '../../core/getProducts';
+import { Loader } from '../../common/Loader/loader';
 
 export const Products = () => {
 
-    const { data } = useQuery(
+    const { data, isLoading, error } = useQuery(
         ["products"],
         fetchProducts
     );
@@ -14,15 +15,17 @@ export const Products = () => {
     const url = window.location.href;
     const parts = url.split('/');
     const titleArray = parts[3];
-    const title = decodeURIComponent(titleArray.replace(/\+/g, ' ')) .replace(/[\/-]/g, ' ');
+    const title = decodeURIComponent(titleArray.replace(/\+/g, ' ')).replace(/[\/-]/g, ' ');
 
-    console.log(data);
-    
+
 
     return (
+
         <Wrapper>
-            <Title>Hiking {title} <ProducstNumber> ( offers)</ProducstNumber> </Title>
-            {/* <FiltersWrapper>
+            {isLoading ? <Loader /> : error ? <Title>SIEMA</Title> :
+                <>
+                    <Title>Hiking {title} <ProducstNumber> ( offers)</ProducstNumber> </Title>
+                    {/* <FiltersWrapper>
                 <FilterTitle>Filters</FilterTitle>
                 <FilterSelect >
                     <Option value="" disabled selected>Sort</Option>
@@ -36,8 +39,8 @@ export const Products = () => {
                     <Option>Female</Option>
                 </FilterSelect>
             </FiltersWrapper> */}
-            <ProductsWrapper>
-                {/* {data.backpacks.map((backpack) => (
+                    <ProductsWrapper>
+                        {/* {data.backpacks.map((backpack) => (
                     <ProductTile to={`/product/${backpack.id}`} key={backpack.id}>
                         <Image src={backpack.image} />
                         <ProductName>{backpack.name}</ProductName>
@@ -46,8 +49,11 @@ export const Products = () => {
                         <CartButton>Add to cart</CartButton>
                     </ProductTile>
                 ))} */}
-            </ProductsWrapper>
-        </Wrapper>
+                    </ProductsWrapper>
+                </>
+            }
+        </Wrapper >
+
     );
 };
 
