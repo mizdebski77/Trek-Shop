@@ -4,6 +4,7 @@ import ex from '../../common/Images/backpack.svg';
 import { useQuery } from '@tanstack/react-query';
 import { fetchProducts } from '../../core/getProducts';
 import { Loader } from '../../common/Loader/loader';
+import { Error } from '../../common/Error/error';
 
 export const Products = () => {
 
@@ -22,7 +23,7 @@ export const Products = () => {
     return (
 
         <Wrapper>
-            {isLoading ? <Loader /> : error ? <Title>SIEMA</Title> :
+            {isLoading ? <Loader /> : error ? <Error /> :
                 <>
                     <Title>Hiking {title} <ProducstNumber> ( offers)</ProducstNumber> </Title>
                     {/* <FiltersWrapper>
