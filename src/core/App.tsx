@@ -16,6 +16,9 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path={"*"} element={<Navigate replace to="/Home" />}> </Route>
         <Route path="/Hiking-backpacks" element={<Products />} />
+        <Route path="/Tourist-clothing" element={<Products />} />
+        <Route path="/Hiking-shoes" element={<Products />} />
+        <Route path="/Accessories" element={<Products />} />
         <Route path="/product/:id" element={<Product />} />
         <Route path="/Cart" element={<Cart />} />
         <Route path="/Log-In" element={<LogInPanel />} />

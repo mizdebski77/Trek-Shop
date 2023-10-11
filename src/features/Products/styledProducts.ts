@@ -113,6 +113,7 @@ export const ProductTile = styled(Link)`
 export const Image = styled.img`
     max-width: 320px;
     margin: 0 auto;
+    max-height: 320px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         max-width: 140px;
