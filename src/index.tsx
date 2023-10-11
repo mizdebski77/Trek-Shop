@@ -5,15 +5,22 @@ import App from './core/App';
 import { theme } from './core/theme';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './core/globalStyles';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+const queryClient = new QueryClient();
+
 root.render(
-  < ThemeProvider theme={theme} >
-    <GlobalStyles />
-    <App />
-  </ThemeProvider >
+  <QueryClientProvider client={queryClient}>
+    <ThemeProvider theme={theme} >
+      <GlobalStyles />
+      <App />
+    </ThemeProvider >
+  </QueryClientProvider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
