@@ -2,7 +2,7 @@ const { nanoid } = require("nanoid");
 
 const generateId = () => nanoid();
 const products = {
-    accessories: [
+    Accessories: [
         {
             id: generateId(),
             name: "Carabiner",
@@ -85,7 +85,7 @@ const products = {
         },
     ],
 
-    backpacks: [
+    Backpacks: [
         {
             id: generateId(),
             name: "TrailSeeker 35",
@@ -178,7 +178,7 @@ const products = {
         },
     ],
 
-    clothes: [
+    Clothes: [
         {
             id: generateId(),
             name: "StormShield Pro",
@@ -245,7 +245,7 @@ const products = {
         }
     ],
 
-    shoes: [
+    Shoes: [
         {
             id: generateId(),
             name: "TrailBlaze Hiking Boots",

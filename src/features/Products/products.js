@@ -18,6 +18,9 @@ export const Products = () => {
     const titleArray = parts[3];
     const title = decodeURIComponent(titleArray.replace(/\+/g, ' ')).replace(/[\/-]/g, ' ');
 
+    if (data) {
+        console.log(data[title]);
+    }
 
 
     return (
@@ -25,7 +28,7 @@ export const Products = () => {
         <Wrapper>
             {isLoading ? <Loader /> : error ? <Error /> :
                 <>
-                    <Title>Hiking {title} <ProducstNumber> ( offers)</ProducstNumber> </Title>
+                    <Title>Hiking {title} <ProducstNumber> ({data[title].length} offers)</ProducstNumber> </Title>
                     {/* <FiltersWrapper>
                 <FilterTitle>Filters</FilterTitle>
                 <FilterSelect >
@@ -41,7 +44,7 @@ export const Products = () => {
                 </FilterSelect>
             </FiltersWrapper> */}
                     <ProductsWrapper>
-                        {/* {data.backpacks.map((backpack) => (
+                        {data[title].map((backpack) => (
                     <ProductTile to={`/product/${backpack.id}`} key={backpack.id}>
                         <Image src={backpack.image} />
                         <ProductName>{backpack.name}</ProductName>
@@ -49,7 +52,7 @@ export const Products = () => {
                         <Price>{backpack.price} €</Price>
                         <CartButton>Add to cart</CartButton>
                     </ProductTile>
-                ))} */}
+                ))}
                     </ProductsWrapper>
                 </>
             }

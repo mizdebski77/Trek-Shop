@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Caption, IconsWrapper, ImagesWrapper, LinksWrapper, Logo, LogoSpan, MobileIconsWrapper, MobileLinksWrapper, NavLink, PhoneLinksWrapper, PhoneNavbar, SvgImage, Wrapper } from './styledNavigation';
+import { Caption, IconsWrapper, ImagesWrapper, LinksWrapper, Logo, LogoSpan, MobileIconsWrapper, MobileLinksWrapper, NaviLink, PhoneLinksWrapper, PhoneNavbar, SvgImage, Wrapper } from './styledNavigation';
 import { links } from './links';
 import account from '../Images/accountSVG.svg';
 import cart from '../Images/cartSVG.svg';
@@ -26,9 +26,9 @@ export const Navigation = () => {
 
                 <LinksWrapper>
                     {links.map((link, index) => (
-                        <NavLink key={index} to={link.link} onClick={() => scrollTop()}>
+                        <NaviLink key={index} to={link.link} onClick={() => scrollTop()}>
                             {link.text}
-                        </NavLink>
+                        </NaviLink>
                     ))}
                 </LinksWrapper>
 
@@ -56,13 +56,13 @@ export const Navigation = () => {
                     >
                         <PhoneLinksWrapper>
                             {links.map((link, index) => (
-                                <NavLink
+                                <NaviLink
                                     key={index}
                                     to={link.link}
                                     onClick={() => scrollTop}
                                 >
                                     {link.text}
-                                </NavLink>
+                                </NaviLink>
                             ))}
                         </PhoneLinksWrapper>
 
