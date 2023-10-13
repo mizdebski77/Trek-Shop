@@ -2,11 +2,11 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Navigation } from "../common/Navigation/navigation";
 import { Home } from "../features/Home/home";
 import { Footer } from "../common/Footer/footer";
-import { Products } from "../features/Products/products";
 import { Product } from "../features/Products/Product/product";
 import { Cart } from "../features/Cart/cart";
 import { LogInPanel } from "../features/LogInPanel/logInPanel";
 import { Registration } from "../features/Registration/registration";
+import { Products } from "../features/Products/products";
 
 function App() {
   return (

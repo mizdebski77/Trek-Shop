@@ -6,6 +6,14 @@ import { fetchProducts } from '../../core/getProducts';
 import { Loader } from '../../common/Loader/loader';
 import { Error } from '../../common/Error/error';
 
+interface Product {
+    id: number;
+    name: string;
+    description: string;
+    image: string;
+    price: number;
+};
+
 export const Products = () => {
 
     const { data, isLoading, error } = useQuery(
@@ -44,15 +52,15 @@ export const Products = () => {
                 </FilterSelect>
             </FiltersWrapper> */}
                     <ProductsWrapper>
-                        {data[title].map((backpack) => (
-                    <ProductTile to={`/product/${backpack.id}`} key={backpack.id}>
-                        <Image src={backpack.image} />
-                        <ProductName>{backpack.name}</ProductName>
-                        <ProductDescription>{backpack.description}</ProductDescription>
-                        <Price>{backpack.price} €</Price>
-                        <CartButton>Add to cart</CartButton>
-                    </ProductTile>
-                ))}
+                        {data[title].map((backpack: Product) => (
+                            <ProductTile to={`/product/${backpack.id}`} key={backpack.id}>
+                                <Image src={backpack.image} />
+                                <ProductName>{backpack.name}</ProductName>
+                                <ProductDescription>{backpack.description}</ProductDescription>
+                                <Price>{backpack.price} €</Price>
+                                <CartButton>Add to cart</CartButton>
+                            </ProductTile>
+                        ))}
                     </ProductsWrapper>
                 </>
             }
