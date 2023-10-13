@@ -9,4 +9,3 @@ export const tilesData = [
     { text: 'Hiking shoes', src: shoe, link: '/Shoes' },
     { text: 'Accessories', src: acc, link: '/Accessories' },
 ];
-

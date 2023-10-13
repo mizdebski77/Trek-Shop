@@ -61,8 +61,7 @@ export const CustomSlider = styled(Slider)`
 `;
 
 export const Image = styled.img`
-    margin: 0 auto 72px;
-
+    margin: 0 auto 100px;
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         margin: 0 auto 24px;
     };

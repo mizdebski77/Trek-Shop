@@ -12,6 +12,7 @@ interface Product {
     description: string;
     image: string;
     price: number;
+    category: string
 };
 
 export const Products = () => {
@@ -26,9 +27,6 @@ export const Products = () => {
     const titleArray = parts[3];
     const title = decodeURIComponent(titleArray.replace(/\+/g, ' ')).replace(/[\/-]/g, ' ');
 
-    if (data) {
-        console.log(data[title]);
-    }
 
 
     return (
@@ -37,27 +35,13 @@ export const Products = () => {
             {isLoading ? <Loader /> : error ? <Error /> :
                 <>
                     <Title>Hiking {title} <ProducstNumber> ({data[title].length} offers)</ProducstNumber> </Title>
-                    {/* <FiltersWrapper>
-                <FilterTitle>Filters</FilterTitle>
-                <FilterSelect >
-                    <Option value="" disabled selected>Sort</Option>
-                    <Option>Price (High to Low)</Option>
-                    <Option>Price (Low to High)</Option>
-                </FilterSelect>
-
-                <FilterSelect >
-                    <Option value="" disabled selected>Gender</Option>
-                    <Option>Male</Option>
-                    <Option>Female</Option>
-                </FilterSelect>
-            </FiltersWrapper> */}
                     <ProductsWrapper>
-                        {data[title].map((backpack: Product) => (
-                            <ProductTile to={`/product/${backpack.id}`} key={backpack.id}>
-                                <Image src={backpack.image} />
-                                <ProductName>{backpack.name}</ProductName>
-                                <ProductDescription>{backpack.description}</ProductDescription>
-                                <Price>{backpack.price} €</Price>
+                        {data[title].map((product: Product) => (
+                            <ProductTile to={`/${product.category}/${product.id}`} key={product.id}>
+                                <Image src={product.image} />
+                                <ProductName>{product.name}</ProductName>
+                                <ProductDescription>{product.description}</ProductDescription>
+                                <Price>{product.price} €</Price>
                                 <CartButton>Add to cart</CartButton>
                             </ProductTile>
                         ))}
