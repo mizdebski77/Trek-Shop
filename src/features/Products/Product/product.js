@@ -1,6 +1,5 @@
 import React from 'react';
 import { About, Button, ShortDescriptionWrapper, Image, Price, PriceCartWrapper, ProductTile, ReadMore, ShortDescription, TextWrapper, Title, Wrapper, DescriptionWrapper, DescriptionImg, DescriptionText, DesciptionTitle, Description, DescriptionContainer, CustomSlider, SimilarProducts, SimilarTitle, SimilarSwiper, Tile, TileImg, TileTitle, TileDesc, TilePrice, TileButton, TileWrapper } from './styledProduct';
-import bp from '../../../common/Images/backpack.svg';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useQuery } from '@tanstack/react-query';
@@ -90,7 +89,12 @@ export const Product = () => {
                             </PriceCartWrapper>
                             <ShortDescriptionWrapper>
                                 <ShortDescription>{product.mediumDescription}</ShortDescription>
-                                <ReadMore to='/xd'>Read More</ReadMore>
+                                <ReadMore to='description'
+                                    spy={true}
+                                    offset={-120}
+                                    smooth={true}
+                                    duration={1500}
+                                >Read More</ReadMore>
                             </ShortDescriptionWrapper>
                         </TextWrapper>
                     </ProductTile>
@@ -114,7 +118,7 @@ export const Product = () => {
                     </SimilarProducts>
 
 
-                    <DescriptionWrapper>
+                    <DescriptionWrapper id="description">
                         <DescriptionContainer>
                             <DescriptionImg src={product.image} />
                             <DescriptionText>

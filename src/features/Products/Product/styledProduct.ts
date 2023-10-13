@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import Slider from "react-slick";
 import { styled } from "styled-components";
 
@@ -177,6 +177,7 @@ export const ReadMore = styled(Link)`
     font-weight: 400;
     text-decoration: none;
     transition: 0.3s;
+    cursor: pointer;
 
     &:hover {
         color: rgba(71, 82, 40, 0.61);
