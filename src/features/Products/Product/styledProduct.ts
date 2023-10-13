@@ -323,6 +323,7 @@ export const TileWrapper = styled.div`
 
 export const TileImg = styled.img`
     max-width: 200px;
+    max-height: 200px;
     width: 100%;
     margin: 0 auto;
 

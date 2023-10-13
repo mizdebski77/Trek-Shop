@@ -319,7 +319,7 @@ const products = {
             longDescription: "The SummitExplorer Trekking Shoes are versatile and suitable for a wide range of outdoor activities. These shoes provide a comfortable fit and excellent support for your feet. They are equipped with a durable outsole that offers great traction.",
             mediumDescription: "The SummitExplorer Trekking Shoes are versatile and suitable for a wide range of outdoor activities. These shoes provide a comfortable fit and excellent support for your feet.",
             price: 129.99,
-            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952259/TrekShop/Shoes/10_cr0tjz.png'
+            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952243/TrekShop/Shoes/8_omknis.png'
         },
 
         {
@@ -340,7 +340,7 @@ const products = {
             longDescription: "The WildVenture Trail Runners are designed for those who prefer fast-paced outdoor activities. These lightweight and breathable shoes are perfect for trail running and fast hikes. They feature a responsive cushioning system and a grippy outsole for stability.",
             mediumDescription: "The WildVenture Trail Runners are designed for those who prefer fast-paced outdoor activities. These lightweight and breathable shoes are perfect for trail running and fast hikes.",
             price: 89.99,
-            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952260/TrekShop/Shoes/5_aueetl.png'
+            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952256/TrekShop/Shoes/3_lhkspu.png'
         },
         {
             id: generateId(),
@@ -350,7 +350,7 @@ const products = {
             longDescription: "The RuggedPath Hiking Boots are built to withstand challenging terrain. With their sturdy construction and durable materials, these boots offer excellent ankle support and protection. They are ideal for trekkers who explore rough and rocky trails.",
             mediumDescription: "The RuggedPath Hiking Boots are built to withstand challenging terrain. With their sturdy construction and durable materials, these boots offer excellent ankle support and protection.",
             price: 139.99,
-            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952260/TrekShop/Shoes/9_odcclt.png'
+            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952254/TrekShop/Shoes/6_qvn18y.png'
         },
         {
             id: generateId(),
@@ -360,7 +360,7 @@ const products = {
             longDescription: "The WildTrail Running Shoes are built for adventurers who seek excitement on the trail. These shoes offer a combination of agility and comfort for your outdoor runs and hikes. With a breathable upper and responsive cushioning, they'll keep you moving confidently.",
             mediumDescription: "The WildTrail Running Shoes are built for adventurers who seek excitement on the trail. These shoes offer a combination of agility and comfort for your outdoor runs and hikes.",
             price: 99.99,
-            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952260/TrekShop/Shoes/8_znl3wq.png'
+            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952253/TrekShop/Shoes/5_n2klho.png'
         },
         {
             id: generateId(),
@@ -370,7 +370,7 @@ const products = {
             longDescription: "The TrekKings Waterproof Boots are your dependable choice for wet and rugged treks. These boots feature a waterproof membrane to keep your feet dry, and the rugged outsole ensures traction on challenging terrain. They offer excellent ankle support and comfort for long adventures.",
             mediumDescription: "The TrekKings Waterproof Boots are your dependable choice for wet and rugged treks. These boots feature a waterproof membrane to keep your feet dry, and the rugged outsole ensures traction on challenging terrain.",
             price: 159.99,
-            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952259/TrekShop/Shoes/7_eur6wv.png'
+            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952249/TrekShop/Shoes/4_mk5sok.png'
         },
         {
             id: generateId(),
@@ -380,7 +380,7 @@ const products = {
             longDescription: "The AdventureLite Hiking Shoes are designed for hikers who value lightweight and flexibility. These shoes are perfect for day hikes and casual outdoor activities. They feature a breathable mesh upper and a comfortable EVA midsole.",
             mediumDescription: "The AdventureLite Hiking Shoes are designed for hikers who value lightweight and flexibility. These shoes are perfect for day hikes and casual outdoor activities.",
             price: 79.99,
-            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952259/TrekShop/Shoes/4_lkl5gh.png'
+            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952246/TrekShop/Shoes/1_mlwfuj.png'
         }
     ]
 }

@@ -66,7 +66,8 @@ export const Product = () => {
                 },
             },
         ],
-    }
+    };
+
 
     return (
         <Wrapper>
@@ -93,49 +94,22 @@ export const Product = () => {
                             </ShortDescriptionWrapper>
                         </TextWrapper>
                     </ProductTile>
+
+
                     <SimilarProducts>
                         <SimilarTitle>Similar items</SimilarTitle>
                         <SimilarSwiper {...settings2}>
-                            <TileWrapper>
-                                <Tile>
-                                    <TileImg src={bp} />
-                                    <TileTitle>Lorem</TileTitle>
-                                    <TileDesc>Hiking backpack queshua escape 16l</TileDesc>
-                                    <TilePrice>40 €</TilePrice>
-                                    <TileButton>Add to cart</TileButton>
-                                </Tile>
-                            </TileWrapper>
-
-                            <TileWrapper>
-                                <Tile>
-                                    <TileImg src={bp} />
-                                    <TileTitle>Lorem</TileTitle>
-                                    <TileDesc>Hiking backpack queshua escape 16l</TileDesc>
-                                    <TilePrice>40 €</TilePrice>
-                                    <TileButton>Add to cart</TileButton>
-                                </Tile>
-                            </TileWrapper>
-
-                            <TileWrapper>
-                                <Tile>
-                                    <TileImg src={bp} />
-                                    <TileTitle>Lorem</TileTitle>
-                                    <TileDesc>Hiking backpack queshua escape 16l</TileDesc>
-                                    <TilePrice>40 €</TilePrice>
-                                    <TileButton>Add to cart</TileButton>
-                                </Tile>
-                            </TileWrapper>
-
-                            <TileWrapper>
-                                <Tile>
-                                    <TileImg src={bp} />
-                                    <TileTitle>Lorem</TileTitle>
-                                    <TileDesc>Hiking backpack queshua escape 16l</TileDesc>
-                                    <TilePrice>40 €</TilePrice>
-                                    <TileButton>Add to cart</TileButton>
-                                </Tile>
-                            </TileWrapper>
-
+                            {data[category].map((similarProduct) => (
+                                <TileWrapper key={similarProduct.id}>
+                                    <Tile>
+                                        <TileImg src={similarProduct.image} />
+                                        <TileTitle>{similarProduct.name}</TileTitle>
+                                        <TileDesc>{similarProduct.description}</TileDesc>
+                                        <TilePrice>{similarProduct.price} €</TilePrice>
+                                        <TileButton>Add to cart</TileButton>
+                                    </Tile>
+                                </TileWrapper>
+                            ))}
                         </SimilarSwiper>
                     </SimilarProducts>
 
