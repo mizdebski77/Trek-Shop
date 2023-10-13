@@ -7,6 +7,15 @@ import { fetchProducts } from '../../../core/getProducts';
 import { Loader } from '../../../common/Loader/loader';
 import { Error } from '../../../common/Error/error';
 
+interface Product {
+    id: string;
+    name: string;
+    description: string;
+    image: string;
+    price: number;
+    category: string
+};
+
 export const Product = () => {
 
     const url = window.location.href;
@@ -19,9 +28,9 @@ export const Product = () => {
         fetchProducts
     );
 
-    const getProductById = (id) => {
+    const getProductById = (id: string) => {
         if (data && data[category]) {
-            return data[category].find(product => product.id === id);
+            return data[category].find((product: Product) => product.id === id);
         }
         return null;
     };
@@ -103,7 +112,7 @@ export const Product = () => {
                     <SimilarProducts>
                         <SimilarTitle>Similar items</SimilarTitle>
                         <SimilarSwiper {...settings2}>
-                            {data[category].map((similarProduct) => (
+                            {data[category].map((similarProduct: Product) => (
                                 <TileWrapper key={similarProduct.id}>
                                     <Tile>
                                         <TileImg src={similarProduct.image} />
