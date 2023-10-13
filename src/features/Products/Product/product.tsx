@@ -37,7 +37,6 @@ export const Product = () => {
 
     const product = getProductById(productID);
 
-
     const settings1 = {
         customPaging: function () {
             return (
@@ -76,7 +75,6 @@ export const Product = () => {
         ],
     };
 
-
     return (
         <Wrapper>
             {isLoading ? <Loader /> : error ? <Error /> :
@@ -113,7 +111,7 @@ export const Product = () => {
                         <SimilarTitle>Similar items</SimilarTitle>
                         <SimilarSwiper {...settings2}>
                             {data[category].map((similarProduct: Product) => (
-                                <TileWrapper key={similarProduct.id}>
+                                <TileWrapper to={`/${similarProduct.category}/${similarProduct.id}`} key={similarProduct.id}>
                                     <Tile>
                                         <TileImg src={similarProduct.image} />
                                         <TileTitle>{similarProduct.name}</TileTitle>

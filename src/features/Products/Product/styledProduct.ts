@@ -1,7 +1,7 @@
 import { Link } from "react-scroll";
 import Slider from "react-slick";
 import { styled } from "styled-components";
-
+import { Link as TileLink } from 'react-router-dom';
 export const Wrapper = styled.section`
     min-height: 100vh;
 `;
@@ -318,8 +318,8 @@ export const SimilarSwiper = styled(Slider)`
     }
 `;
 
-export const TileWrapper = styled.div`
-
+export const TileWrapper = styled(TileLink)`
+    text-decoration: none;
 `;
 
 export const TileImg = styled.img`
