@@ -37,7 +37,7 @@ export const Products = () => {
                     <Title>Hiking {title} <ProducstNumber> ({data[title].length} offers)</ProducstNumber> </Title>
                     <ProductsWrapper>
                         {data[title].map((product: Product) => (
-                            <ProductTile to={`/${product.category}/${product.id}`} key={product.id}>
+                            <ProductTile to={`/${product.category}/${product.id}`} key={product.id} onClick={() => window.scrollTo(0, 0)}>
                                 <Image src={product.image} />
                                 <ProductName>{product.name}</ProductName>
                                 <ProductDescription>{product.description}</ProductDescription>

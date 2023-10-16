@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Caption, IconsWrapper, ImagesWrapper, LinksWrapper, Logo, LogoSpan, MobileIconsWrapper, MobileLinksWrapper, NaviLink, PhoneLinksWrapper, PhoneNavbar, SvgImage, Wrapper } from './styledNavigation';
+import { Caption, IconsWrapper, ImagesWrapper, LinksWrapper, Logo, LogoSpan, MobileIconsWrapper, MobileLinksWrapper, NaviLink, NumberOfProducts, PhoneLinksWrapper, PhoneNavbar, SvgImage, Wrapper } from './styledNavigation';
 import { links } from './links';
 import account from '../Images/accountSVG.svg';
 import cart from '../Images/cartSVG.svg';
@@ -73,6 +73,7 @@ export const Navigation = () => {
                             </ImagesWrapper>
 
                             <ImagesWrapper to='/cart'>
+                                <NumberOfProducts>2</NumberOfProducts>
                                 <SvgImage src={cart} />
                                 <Caption>Cart</Caption>
                             </ImagesWrapper>

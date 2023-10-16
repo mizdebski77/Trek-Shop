@@ -6,6 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchProducts } from '../../../core/getProducts';
 import { Loader } from '../../../common/Loader/loader';
 import { Error } from '../../../common/Error/error';
+import { useNavigate } from 'react-router-dom';
 
 interface Product {
     id: string;
@@ -17,6 +18,8 @@ interface Product {
 };
 
 export const Product = () => {
+
+    const navigate = useNavigate();
 
     const url = window.location.href;
     const parts = url.split('/');
@@ -75,6 +78,7 @@ export const Product = () => {
         ],
     };
 
+
     return (
         <Wrapper>
             {isLoading ? <Loader /> : error ? <Error /> :
@@ -111,7 +115,10 @@ export const Product = () => {
                         <SimilarTitle>Similar items</SimilarTitle>
                         <SimilarSwiper {...settings2}>
                             {data[category].map((similarProduct: Product) => (
-                                <TileWrapper to={`/${similarProduct.category}/${similarProduct.id}`} key={similarProduct.id}>
+                                <TileWrapper to={`/${similarProduct.category}/${similarProduct.id}`} onClick={() => {
+                                    navigate(`/${similarProduct.category}/${similarProduct.id}`);
+                                    window.scrollTo(0, 0);
+                                }}>
                                     <Tile>
                                         <TileImg src={similarProduct.image} />
                                         <TileTitle>{similarProduct.name}</TileTitle>
@@ -137,7 +144,7 @@ export const Product = () => {
                         </DescriptionContainer>
                     </DescriptionWrapper>
                 </>}
-        </Wrapper>
+        </Wrapper >
     );
 };
 

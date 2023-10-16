@@ -111,6 +111,10 @@ export const ImagesWrapper = styled(Link)`
     text-decoration: none;
 `;
 
+export const NumberOfProducts = styled.span`
+
+`;
+
 export const Caption = styled.span`
     font-size: 14px;
 

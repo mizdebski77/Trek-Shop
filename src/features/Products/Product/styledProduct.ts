@@ -323,8 +323,7 @@ export const TileWrapper = styled(TileLink)`
 `;
 
 export const TileImg = styled.img`
-    max-width: 200px;
-    max-height: 200px;
+    max-width:100px;
     width: 100%;
     margin: 0 auto;
 
@@ -397,6 +396,7 @@ export const Tile = styled.div`
     transition: 0.3s;
     padding: 40px;
     cursor: pointer;
+    min-height: 400px;
 
     &:hover {
         background: rgba(113, 113, 113, 0.13);
