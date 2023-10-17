@@ -10,9 +10,6 @@ import { SimilarItems } from './SimilarItems/similarItems';
 export const Cart = () => {
 
     const [counter, setCounter] = useState(1);
-    const dispatch = useDispatch();
-
-
 
     const addItem = () => {
         setCounter(counter + 1);
@@ -23,11 +20,13 @@ export const Cart = () => {
     };
 
     const products = useSelector((state: RootState) => state.cart.cartItems);
+    const totalAmount = useSelector((state: RootState) => state.cart.cartTotalAmount);
 
 
     return (
         <Wrapper>
             <Information />
+
             <CartWrapper>
                 <ProductsWrapper>
                     {products.map((product: CartItem) => (
@@ -40,7 +39,7 @@ export const Cart = () => {
                                 <ProductDescription>{product.description}</ProductDescription>
                                 <ProductSize>Size: M</ProductSize>
                                 <PriceWrapper>
-                                    <ProductPrice>{product.price}</ProductPrice>
+                                    <ProductPrice>{product.price} €</ProductPrice>
                                     <ProductCount>
                                         <CountButton onClick={() => removeItem()}>-</CountButton>
                                         {counter}
@@ -57,14 +56,14 @@ export const Cart = () => {
                     <OrderContainer>
                         <CostsWrapper>
                             <Value>Value of products</Value>
-                            <Value>80 €</Value>
+                            <Value>{totalAmount.toFixed(2)} €</Value>
                         </CostsWrapper>
                         <Discount>I have a discount code</Discount>
                     </OrderContainer>
                     <OrderContainer>
                         <CostsWrapper>
                             <Sum>Sum</Sum>
-                            <Sum>80 €</Sum>
+                            <Sum>{totalAmount.toFixed(2)} €</Sum>
                         </CostsWrapper>
                     </OrderContainer>
                     <NextButton>Next</NextButton>
