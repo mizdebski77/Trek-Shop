@@ -1,5 +1,5 @@
 import React from 'react';
-import { About, Button, ShortDescriptionWrapper, Image, Price, PriceCartWrapper, ProductTile, ReadMore, ShortDescription, TextWrapper, Title, Wrapper, DescriptionWrapper, DescriptionImg, DescriptionText, DesciptionTitle, Description, DescriptionContainer, CustomSlider, SimilarProducts, SimilarTitle, SimilarSwiper, Tile, TileImg, TileTitle, TileDesc, TilePrice, TileButton, TileWrapper } from './styledProduct';
+import { About, Button, ShortDescriptionWrapper, Image, Price, PriceCartWrapper, ProductTile, ReadMore, ShortDescription, TextWrapper, Title, Wrapper, DescriptionWrapper, DescriptionImg, DescriptionText, DesciptionTitle, Description, DescriptionContainer, CustomSlider, SimilarProducts, SimilarTitle, SimilarSwiper, Tile, TileImg, TileTitle, TileDesc, TilePrice, TileButton, TileWrapper, ToastWrapper } from './styledProduct';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useQuery } from '@tanstack/react-query';
@@ -10,7 +10,8 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { addToCart } from '../../Cart/cartSlice';
 import { ProductInterface } from '../../../core/interface';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Product = () => {
 
@@ -33,6 +34,9 @@ export const Product = () => {
         }
         return null;
     };
+
+    const notify = () => toast.success(`You've successfully added a ${product.name} to your shopping cart`);
+
 
     const product = getProductById(productID);
 
@@ -96,8 +100,21 @@ export const Product = () => {
                             <About>{product.description}</About>
                             <PriceCartWrapper>
                                 <Price>{product.price} €</Price>
-                                <Button onClick={() => handleAddToCart(product)}>Add to cart</Button>
+                                <Button onClick={() => { handleAddToCart(product); notify(); }}>Add to cart</Button>
                             </PriceCartWrapper>
+                            <ToastWrapper
+                                position="bottom-left"
+                                autoClose={5000}
+                                hideProgressBar={false}
+                                newestOnTop={false}
+                                closeOnClick
+                                rtl={false}
+                                pauseOnFocusLoss
+                                draggable
+                                pauseOnHover={false}
+                                theme="dark"
+
+                            />
                             <ShortDescriptionWrapper>
                                 <ShortDescription>{product.mediumDescription}</ShortDescription>
                                 <ReadMore to='description'
