@@ -7,7 +7,7 @@ import { Loader } from '../../common/Loader/loader';
 import { Error } from '../../common/Error/error';
 
 interface Product {
-    id: number;
+    id: string;
     name: string;
     description: string;
     image: string;
@@ -27,6 +27,7 @@ export const Products = () => {
     const titleArray = parts[3];
     const title = decodeURIComponent(titleArray.replace(/\+/g, ' ')).replace(/[\/-]/g, ' ');
 
+    
 
 
     return (

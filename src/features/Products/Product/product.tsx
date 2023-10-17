@@ -114,20 +114,22 @@ export const Product = () => {
                     <SimilarProducts>
                         <SimilarTitle>Similar items</SimilarTitle>
                         <SimilarSwiper {...settings2}>
-                            {data[category].map((similarProduct: Product) => (
-                                <TileWrapper to={`/${similarProduct.category}/${similarProduct.id}`} onClick={() => {
-                                    navigate(`/${similarProduct.category}/${similarProduct.id}`);
-                                    window.scrollTo(0, 0);
-                                }}>
-                                    <Tile>
-                                        <TileImg src={similarProduct.image} />
-                                        <TileTitle>{similarProduct.name}</TileTitle>
-                                        <TileDesc>{similarProduct.description}</TileDesc>
-                                        <TilePrice>{similarProduct.price} €</TilePrice>
-                                        <TileButton>Add to cart</TileButton>
-                                    </Tile>
-                                </TileWrapper>
-                            ))}
+                            {data[category]
+                                .filter((similarProduct: Product) => similarProduct.id !== productID)
+                                .map((similarProduct: Product) => (
+                                    <TileWrapper to={`/${similarProduct.category}/${similarProduct.id}`} onClick={() => {
+                                        navigate(`/${similarProduct.category}/${similarProduct.id}`);
+                                        window.scrollTo(0, 0);
+                                    }}>
+                                        <Tile>
+                                            <TileImg src={similarProduct.image} />
+                                            <TileTitle>{similarProduct.name}</TileTitle>
+                                            <TileDesc>{similarProduct.description}</TileDesc>
+                                            <TilePrice>{similarProduct.price} €</TilePrice>
+                                            <TileButton>Add to cart</TileButton>
+                                        </Tile>
+                                    </TileWrapper>
+                                ))}
                         </SimilarSwiper>
                     </SimilarProducts>
 

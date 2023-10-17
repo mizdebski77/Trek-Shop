@@ -323,7 +323,7 @@ export const TileWrapper = styled(TileLink)`
 `;
 
 export const TileImg = styled.img`
-    max-width:100px;
+    max-width:160px;
     width: 100%;
     margin: 0 auto;
 
