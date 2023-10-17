@@ -7,14 +7,18 @@ import Hamburger from 'hamburger-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { mobileNavAnimation } from '../../core/animations';
 import { scrollTop } from '../../core/scrollTop';
+import { useSelector } from "react-redux";
+import { RootState } from '../../core/store';
 
 export const Navigation = () => {
 
     const [phoneNavbar, setPhoneNavbar] = useState(false);
+    const products = useSelector((state: RootState) => state.cart.cartItems);
 
     const togglePhoneNavbar = () => {
         setPhoneNavbar(!phoneNavbar);
     };
+
 
     return (
         <>
@@ -39,6 +43,11 @@ export const Navigation = () => {
                     </ImagesWrapper>
 
                     <ImagesWrapper to='/Cart'>
+                        {products.length > 0 && (
+                            <NumberOfProducts>
+                                {products.length}
+                            </NumberOfProducts>
+                        )}
                         <SvgImage src={cart} />
                         <Caption>Cart</Caption>
                     </ImagesWrapper>

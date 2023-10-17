@@ -112,7 +112,20 @@ export const ImagesWrapper = styled(Link)`
 `;
 
 export const NumberOfProducts = styled.span`
+    background: #7E8B56;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+    color:white;
 
+    &:disabled {
+        display: none;
+    }
 `;
 
 export const Caption = styled.span`

@@ -6,5 +6,6 @@ const store = configureStore({
         cart: cartSliceReducer,
     },
 });
+export type RootState = ReturnType<typeof store.getState>
 
 export default store;

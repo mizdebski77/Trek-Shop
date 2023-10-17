@@ -7,19 +7,15 @@ import { fetchProducts } from '../../../core/getProducts';
 import { Loader } from '../../../common/Loader/loader';
 import { Error } from '../../../common/Error/error';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { addToCart } from '../../Cart/cartSlice';
+import { ProductInterface } from '../../../core/interface';
 
-interface Product {
-    id: string;
-    name: string;
-    description: string;
-    image: string;
-    price: number;
-    category: string
-};
 
 export const Product = () => {
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const url = window.location.href;
     const parts = url.split('/');
@@ -33,7 +29,7 @@ export const Product = () => {
 
     const getProductById = (id: string) => {
         if (data && data[category]) {
-            return data[category].find((product: Product) => product.id === id);
+            return data[category].find((product: ProductInterface) => product.id === id);
         }
         return null;
     };
@@ -78,6 +74,10 @@ export const Product = () => {
         ],
     };
 
+    const handleAddToCart = (product: ProductInterface) => {
+        dispatch(addToCart(product))
+    };
+
 
     return (
         <Wrapper>
@@ -96,7 +96,7 @@ export const Product = () => {
                             <About>{product.description}</About>
                             <PriceCartWrapper>
                                 <Price>{product.price} €</Price>
-                                <Button>Add to cart</Button>
+                                <Button onClick={() => handleAddToCart(product)}>Add to cart</Button>
                             </PriceCartWrapper>
                             <ShortDescriptionWrapper>
                                 <ShortDescription>{product.mediumDescription}</ShortDescription>
@@ -115,8 +115,8 @@ export const Product = () => {
                         <SimilarTitle>Similar items</SimilarTitle>
                         <SimilarSwiper {...settings2}>
                             {data[category]
-                                .filter((similarProduct: Product) => similarProduct.id !== productID)
-                                .map((similarProduct: Product) => (
+                                .filter((similarProduct: ProductInterface) => similarProduct.id !== productID)
+                                .map((similarProduct: ProductInterface) => (
                                     <TileWrapper to={`/${similarProduct.category}/${similarProduct.id}`} onClick={() => {
                                         navigate(`/${similarProduct.category}/${similarProduct.id}`);
                                         window.scrollTo(0, 0);
@@ -126,7 +126,7 @@ export const Product = () => {
                                             <TileTitle>{similarProduct.name}</TileTitle>
                                             <TileDesc>{similarProduct.description}</TileDesc>
                                             <TilePrice>{similarProduct.price} €</TilePrice>
-                                            <TileButton>Add to cart</TileButton>
+                                            <TileButton >Add to cart</TileButton>
                                         </Tile>
                                     </TileWrapper>
                                 ))}

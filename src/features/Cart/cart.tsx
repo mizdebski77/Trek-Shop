@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { SimilarProducts, SimilarTitle, SimilarSwiper, TileWrapper, Tile, TileImg, TileTitle, TileDesc, TilePrice, TileButton, Wrapper, InfoWrapper, NumberWrapper, Number, NumberCaption, CartWrapper, ProductsWrapper, ProductTile, Image, OrderSection, TextWrapper, ProductTitle, ProductDescription, ProductSize, PriceWrapper, ProductPrice, ProductCount, CountButton, OrderTitle, CostsWrapper, Value, Discount, OrderContainer, Sum, NextButton } from './styledCart';
 import bp from '../../common/Images/backpack.svg';
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart, selectItems } from './cartSlice';
+import { RootState } from '../../core/store';
+import { CartItem, ProductInterface } from '../../core/interface';
 
 export const Cart = () => {
 
     const [counter, setCounter] = useState(1);
+    const dispatch = useDispatch();
 
     const settings = {
         dots: true,
@@ -38,6 +43,8 @@ export const Cart = () => {
         setCounter(counter - 1);
     };
 
+    const products = useSelector((state: RootState) => state.cart.cartItems);
+
 
     return (
         <Wrapper>
@@ -65,26 +72,26 @@ export const Cart = () => {
 
             <CartWrapper>
                 <ProductsWrapper>
-
-                    <ProductTile>
-                        <Image src={bp} />
-                        <TextWrapper>
-                            <ProductTitle>
-                                Lorem
-                            </ProductTitle>
-                            <ProductDescription>Hiking backpack escape 16l</ProductDescription>
-                            <ProductSize>Size: M</ProductSize>
-                            <PriceWrapper>
-                                <ProductPrice>40 €</ProductPrice>
-                                <ProductCount>
-                                    <CountButton onClick={() => removeItem()}>-</CountButton>
-                                    {counter}
-                                    <CountButton onClick={() => addItem()}>+</CountButton>
-                                </ProductCount>
-                            </PriceWrapper>
-                        </TextWrapper>
-                    </ProductTile>
-
+                    {products.map((product: CartItem) => (
+                        <ProductTile>
+                            <Image src={product.image} />
+                            <TextWrapper>
+                                <ProductTitle>
+                                    {product.name}
+                                </ProductTitle>
+                                <ProductDescription>{product.description}</ProductDescription>
+                                <ProductSize>Size: M</ProductSize>
+                                <PriceWrapper>
+                                    <ProductPrice>{product.price}</ProductPrice>
+                                    <ProductCount>
+                                        <CountButton onClick={() => removeItem()}>-</CountButton>
+                                        {counter}
+                                        <CountButton onClick={() => addItem()}>+</CountButton>
+                                    </ProductCount>
+                                </PriceWrapper>
+                            </TextWrapper>
+                        </ProductTile>
+                    ))}
                 </ProductsWrapper>
 
                 <OrderSection>
@@ -127,7 +134,7 @@ export const Cart = () => {
                             <TileTitle>Lorem</TileTitle>
                             <TileDesc>Hiking backpack queshua escape 16l</TileDesc>
                             <TilePrice>40 €</TilePrice>
-                            <TileButton>Add to cart</TileButton>
+                            {/* <TileButton onClick={dispatch(addToCart(product))}>Add to cart</TileButton> */}
                         </Tile>
                     </TileWrapper>
 
