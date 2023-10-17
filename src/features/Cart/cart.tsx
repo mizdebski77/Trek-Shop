@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { SimilarProducts, SimilarTitle, SimilarSwiper, TileWrapper, Tile, TileImg, TileTitle, TileDesc, TilePrice, TileButton, Wrapper, InfoWrapper, NumberWrapper, Number, NumberCaption, CartWrapper, ProductsWrapper, ProductTile, Image, OrderSection, TextWrapper, ProductTitle, ProductDescription, ProductSize, PriceWrapper, ProductPrice, ProductCount, CountButton, OrderTitle, CostsWrapper, Value, Discount, OrderContainer, Sum, NextButton } from './styledCart';
+import { SimilarProducts, SimilarTitle, SimilarSwiper, TileWrapper, Tile, TileImg, TileTitle, TileDesc, TilePrice, TileButton, Wrapper, CartWrapper, ProductsWrapper, ProductTile, Image, OrderSection, TextWrapper, ProductTitle, ProductDescription, ProductSize, PriceWrapper, ProductPrice, ProductCount, CountButton, OrderTitle, CostsWrapper, Value, Discount, OrderContainer, Sum, NextButton } from './styledCart';
 import bp from '../../common/Images/backpack.svg';
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, selectItems } from './cartSlice';
 import { RootState } from '../../core/store';
 import { CartItem, ProductInterface } from '../../core/interface';
+import { Information } from './Information/informations';
 
 export const Cart = () => {
 
@@ -48,28 +49,7 @@ export const Cart = () => {
 
     return (
         <Wrapper>
-            <InfoWrapper>
-                <NumberWrapper>
-                    <Number >1</Number>
-                    <NumberCaption>Cart</NumberCaption>
-                </NumberWrapper>
-
-                <NumberWrapper>
-                    <Number inactive>2</Number>
-                    <NumberCaption>Login</NumberCaption>
-                </NumberWrapper>
-
-                <NumberWrapper>
-                    <Number inactive>3</Number>
-                    <NumberCaption>Delivery</NumberCaption>
-                </NumberWrapper>
-
-                <NumberWrapper>
-                    <Number inactive>4</Number>
-                    <NumberCaption>Payment</NumberCaption>
-                </NumberWrapper>
-            </InfoWrapper>
-
+            <Information />
             <CartWrapper>
                 <ProductsWrapper>
                     {products.map((product: CartItem) => (
@@ -96,7 +76,6 @@ export const Cart = () => {
 
                 <OrderSection>
                     <OrderTitle>Your order</OrderTitle>
-
                     <OrderContainer>
                         <CostsWrapper>
                             <Value>Value of products</Value>
@@ -111,7 +90,6 @@ export const Cart = () => {
                         </CostsWrapper>
                     </OrderContainer>
                     <NextButton>Next</NextButton>
-
                 </OrderSection>
             </CartWrapper>
 
