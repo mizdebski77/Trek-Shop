@@ -9,8 +9,6 @@ declare module 'styled-components' {
             firstBP: number,
             secondBP: number,
             mobileBP: number,
-            // secondBreakPoint: number,
-            // mobileMax: number
         };
     }
 }
