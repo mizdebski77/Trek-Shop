@@ -28,6 +28,15 @@ export const Product = () => {
         fetchProducts
     );
 
+    const saveProductsToLocalStorage = (product: ProductInterface) => {
+        const existingProductsJSON = localStorage.getItem('products');
+        const existingProducts = existingProductsJSON ? JSON.parse(existingProductsJSON) : [];
+        existingProducts.push(product);
+        localStorage.setItem('products', JSON.stringify(existingProducts));
+    };
+
+
+
     const getProductById = (id: string) => {
         if (data && data[category]) {
             return data[category].find((product: ProductInterface) => product.id === id);
@@ -79,7 +88,8 @@ export const Product = () => {
     };
 
     const handleAddToCart = (product: ProductInterface) => {
-        dispatch(addToCart(product))
+        dispatch(addToCart(product));
+        saveProductsToLocalStorage(product);
     };
 
 

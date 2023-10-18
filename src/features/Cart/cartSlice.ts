@@ -1,8 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { CartItem } from "../../core/interface";
 
-
-
 interface CartState {
     cartItems: CartItem[];
     cartTotalAmount: number;
@@ -16,7 +14,7 @@ const cartSlice = createSlice({
     } as CartState,
 
     reducers: {
-        addToCart: (state,  action) => {
+        addToCart: (state, action) => {
             state.cartItems.push(action.payload);
             state.cartTotalAmount += action.payload.price;
         },
