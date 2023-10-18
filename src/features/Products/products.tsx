@@ -30,12 +30,16 @@ export const Products = () => {
     };
 
     const sortedProducts = () => {
-        if (sortBy === "priceHighToLow") {
-            return [...data[title]].sort((a, b) => b.price - a.price);
-        } else if (sortBy === "priceLowToHigh") {
-            return [...data[title]].sort((a, b) => a.price - b.price);
+        if (data && data[title]) {
+            if (sortBy === "priceHighToLow") {
+                return [...data[title]].sort((a, b) => b.price - a.price);
+            } else if (sortBy === "priceLowToHigh") {
+                return [...data[title]].sort((a, b) => a.price - b.price);
+            } else {
+                return data[title];
+            }
         } else {
-            return data[title]; 
+            return []; 
         }
     };
 
