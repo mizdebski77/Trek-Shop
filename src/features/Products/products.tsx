@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
 import { FiltersWrapper, FilterTitle, FilterOption, Image, Price, ProducstNumber, ProductDescription, ProductName, ProductTile, ProductsWrapper, Title, Wrapper } from './styledProducts';
-import ex from '../../common/Images/backpack.svg';
 import { useQuery } from '@tanstack/react-query';
 import { fetchProducts } from '../../core/getProducts';
 import { Loader } from '../../common/Loader/loader';
 import { Error } from '../../common/Error/error';
 import { ProductInterface } from '../../core/interface';
-import { useDispatch } from 'react-redux';
-import { addToCart } from '../Cart/cartSlice';
-import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const Products = () => {
