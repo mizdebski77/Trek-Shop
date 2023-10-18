@@ -1,5 +1,5 @@
-import React from 'react';
-import { FilterSelect, FilterTitle, FiltersWrapper, Option, Image, Price, ProducstNumber, ProductDescription, ProductName, ProductTile, ProductsWrapper, Title, Wrapper } from './styledProducts';
+import React, { useState } from 'react';
+import { FiltersWrapper, FilterTitle, FilterOption, Image, Price, ProducstNumber, ProductDescription, ProductName, ProductTile, ProductsWrapper, Title, Wrapper } from './styledProducts';
 import ex from '../../common/Images/backpack.svg';
 import { useQuery } from '@tanstack/react-query';
 import { fetchProducts } from '../../core/getProducts';
@@ -10,7 +10,10 @@ import { useDispatch } from 'react-redux';
 import { addToCart } from '../Cart/cartSlice';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 export const Products = () => {
+
+    const [sortBy, setSortBy] = useState("default");
 
     const { data, isLoading, error } = useQuery(
         ["products"],
@@ -22,13 +25,34 @@ export const Products = () => {
     const titleArray = parts[3];
     const title = decodeURIComponent(titleArray.replace(/\+/g, ' ')).replace(/[\/-]/g, ' ');
 
+    const handleSortBy = (sortType: string) => {
+        setSortBy(sortType);
+    };
+
+    const sortedProducts = () => {
+        if (sortBy === "priceHighToLow") {
+            return [...data[title]].sort((a, b) => b.price - a.price);
+        } else if (sortBy === "priceLowToHigh") {
+            return [...data[title]].sort((a, b) => a.price - b.price);
+        } else {
+            return data[title]; 
+        }
+    };
+
+    const filteredProducts = sortedProducts();
     return (
         <Wrapper>
             {isLoading ? <Loader /> : error ? <Error /> :
                 <>
                     <Title>Hiking {title} <ProducstNumber> ({data[title].length} offers)</ProducstNumber> </Title>
+                    <FiltersWrapper>
+                        <FilterTitle>Filter:</FilterTitle>
+                        <FilterOption onClick={() => handleSortBy("default")}>Default</FilterOption>
+                        <FilterOption onClick={() => handleSortBy("priceHighToLow")}>Price (High to Low)</FilterOption>
+                        <FilterOption onClick={() => handleSortBy("priceLowToHigh")}>Price (Low to High)</FilterOption>
+                    </FiltersWrapper>
                     <ProductsWrapper>
-                        {data[title].map((product: ProductInterface) => (
+                        {filteredProducts.map((product: ProductInterface) => (
                             <ProductTile to={`/${product.category}/${product.id}`} key={product.id} onClick={() => window.scrollTo(0, 0)}>
                                 <Image src={product.image} />
                                 <ProductName>{product.name}</ProductName>

@@ -32,43 +32,6 @@ export const ProducstNumber = styled.span`
     };
 `;
 
-export const FiltersWrapper = styled.div`
-    background: rgba(126, 139, 86, 0.70);
-    width: 100%;
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-`;
-
-export const FilterTitle = styled.h2`
-    color: #FFF;
-    font-size: 28px;
-    font-weight: 400;
-    margin: 0;
-`;
-
-export const FilterSelect = styled.select`
-    padding:6px;
-    font-size: 20px;
-    cursor: pointer;
-    text-align: center;
-    color: white;
-    background: transparent;
-    border: 1px solid white;
-    &:focus {
-        outline: none;
-    }
-`;
-
-export const Option = styled.option`
-    color: black;
-    
-    &:disabled {
-        color:rgba(0,0,0, 0.4)
-    };
-`;
-
 export const ProductsWrapper = styled.div`
     max-width: 1400px;
     margin: 40px auto;
@@ -154,3 +117,32 @@ export const Price = styled.h4`
         font-size: 24px;
     };
 `;
+
+export const FiltersWrapper = styled.div`
+    background: rgba(126, 139, 86, 0.70);
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+`;
+
+export const FilterTitle = styled.h2`
+    color: #FFF;
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0;
+`;
+
+export const FilterOption = styled.h3`
+    color: white;
+    font-weight: normal;
+    margin: 0;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        color: #dfdfdf;
+    };
+`;
+
