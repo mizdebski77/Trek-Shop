@@ -9,16 +9,6 @@ import { SimilarItems } from './SimilarItems/similarItems';
 
 export const Cart = () => {
 
-    const [counter, setCounter] = useState(1);
-
-    const addItem = () => {
-        setCounter(counter + 1);
-    };
-
-    const removeItem = () => {
-        setCounter(counter - 1);
-    };
-
     const products = useSelector((state: RootState) => state.cart.cartItems);
     const totalAmount = useSelector((state: RootState) => state.cart.cartTotalAmount);
 
@@ -40,11 +30,11 @@ export const Cart = () => {
                                 <ProductSize>Size: M</ProductSize>
                                 <PriceWrapper>
                                     <ProductPrice>{product.price} €</ProductPrice>
-                                    <ProductCount>
+                                    {/* <ProductCount>
                                         <CountButton onClick={() => removeItem()}>-</CountButton>
                                         {counter}
                                         <CountButton onClick={() => addItem()}>+</CountButton>
-                                    </ProductCount>
+                                    </ProductCount> */}
                                 </PriceWrapper>
                             </TextWrapper>
                         </ProductTile>
@@ -66,7 +56,7 @@ export const Cart = () => {
                             <Sum>{totalAmount.toFixed(2)} €</Sum>
                         </CostsWrapper>
                     </OrderContainer>
-                    <NextButton>Next</NextButton>
+                    <NextButton to='/LogIn'>Next</NextButton>
                 </OrderSection>
             </CartWrapper>
 

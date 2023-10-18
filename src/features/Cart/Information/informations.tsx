@@ -2,15 +2,22 @@ import React from 'react';
 import { InfoWrapper, NumberWrapper, Number, NumberCaption, } from './styledInformations';
 
 export const Information = () => {
+
+    const url = window.location.href;
+    const parts = url.split('/');
+
+    console.log(parts[3]);
+
+
     return (
         <InfoWrapper>
             <NumberWrapper>
-                <Number >1</Number>
+                <Number inactive={parts[3] === "LogIn"} >1</Number>
                 <NumberCaption>Cart</NumberCaption>
             </NumberWrapper>
 
             <NumberWrapper>
-                <Number inactive>2</Number>
+                <Number inactive={parts[3] !== "LogIn"}>2</Number>
                 <NumberCaption>Login</NumberCaption>
             </NumberWrapper>
 

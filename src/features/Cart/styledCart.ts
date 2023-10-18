@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { css, styled } from "styled-components";
 
@@ -205,7 +206,7 @@ export const Sum = styled.span`
     };
 `;
 
-export const NextButton = styled.button`
+export const NextButton = styled(Link)`
     margin: 32px auto 0;
     padding: 0 80px;
     font-size: 20px;
@@ -214,6 +215,7 @@ export const NextButton = styled.button`
     color: #475228;
     border: 1px solid white;
     transition: 0.3s;
+    text-decoration: none;
 
     &:hover {
         background: rgba(255, 255, 255,0.85);
