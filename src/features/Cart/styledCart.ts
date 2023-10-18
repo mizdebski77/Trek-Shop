@@ -29,7 +29,7 @@ export const ProductTile = styled.div`
     padding: 40px 20px;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    max-height: 230px;
+    max-height: 280px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         padding: 20px;
@@ -47,7 +47,7 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Image = styled.img`
-    max-width: 140px;
+    max-width: 120px;
     margin: 0 auto;
     width: 100%;
 
