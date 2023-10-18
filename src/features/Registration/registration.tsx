@@ -1,27 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Input, InputWrapper, CreateAccountButton, RegistrationContainer, RegistrationWrapper, Span, Title, Wrapper } from './styledRegistration';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Registration = () => {
+    const [name, setName] = useState('');
+    const [surname, setSurname] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const register = (event: React.MouseEvent<HTMLButtonElement>) => {
+        if (name && surname && email && password) {
+            notify();
+            setName('');
+            setSurname('');
+            setEmail('');
+            setPassword('')
+        };
+
+
+    };
+
+    const notify = () => toast.success("Thank you for your registration");
+
     return (
         <Wrapper>
             <RegistrationWrapper>
                 <RegistrationContainer>
                     <Title>
-                        Creat an account
+                        Create an account
                     </Title>
-                    <Span>Access all your purchases, services and apps</Span>
+                    <Span>Access all your purchases, services, and apps</Span>
                     <InputWrapper>
-                        <Input placeholder='Name' />
-                        <Input placeholder='Surname' />
-                        <Input placeholder='E-Mail' />
-                        <Input placeholder='Password' />
-
+                        <Input placeholder='Name' type='name' required onChange={({ target }) => setName(target.value)} />
+                        <Input placeholder='Surname' type='surname' required onChange={({ target }) => setSurname(target.value)} />
+                        <Input placeholder='E-Mail' type='email' required onChange={({ target }) => setEmail(target.value)} />
+                        <Input placeholder='Password' type='password' required onChange={({ target }) => setPassword(target.value)} />
                     </InputWrapper>
-                    <CreateAccountButton>Create an account</CreateAccountButton>
+                    <CreateAccountButton onClick={register}>Create an account</CreateAccountButton>
+                    <ToastContainer
+                        position="bottom-left"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover={false}
+                        theme="dark"
+                    />
                 </RegistrationContainer>
             </RegistrationWrapper>
-
         </Wrapper>
     );
 };
-
