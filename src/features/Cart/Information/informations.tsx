@@ -6,9 +6,6 @@ export const Information = () => {
     const url = window.location.href;
     const parts = url.split('/');
 
-    console.log(parts[3]);
-
-
     return (
         <InfoWrapper>
             <NumberWrapper>

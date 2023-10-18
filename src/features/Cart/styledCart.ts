@@ -41,6 +41,11 @@ export const TextWrapper = styled.div`
     gap: 10px;
 `;
 
+export const ImageWrapper = styled.div`
+    display: grid;
+    gap: 10px;
+`;
+
 export const Image = styled.img`
     max-width: 140px;
     margin: 0 auto;
@@ -49,6 +54,22 @@ export const Image = styled.img`
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         max-width: 100px;
     };
+`;
+
+
+export const RemoveItem = styled.button`
+    background: #d20000;
+    color: white;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 4px 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background: #f90000; 
+    }
 `;
 
 export const ProductTitle = styled.h2`

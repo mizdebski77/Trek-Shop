@@ -9,7 +9,7 @@ export const Registration = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const register = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const register = () => {
         if (name && surname && email && password) {
             notify();
             setName('');

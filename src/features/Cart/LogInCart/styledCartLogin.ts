@@ -98,12 +98,23 @@ export const LogInButton = styled.button`
     background: rgba(255, 255, 255, 1);
     border: none;
     
+    &:disabled {
+        background: transparent;
+        border: 1px solid white;
+        color: white;
+        cursor: no-drop;
+        
+    }
+    
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         font-size: 16px;
     };
 
     &:hover {
         background: rgba(255, 255, 255, 0.8);
+        &:disabled {
+            background: transparent;       
+        }
     }
 
     &:active {
