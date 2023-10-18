@@ -167,11 +167,11 @@ export const CartButton = styled.button`
     transition: 0.3s;
 
     &:hover {
-        background: rgba(71, 82, 40, 0.65);
+        background: rgba(71, 82, 40, 0.55);
     };
 
     &:active {
-        background: rgba(71, 82, 40, 0.45);
+        background: rgba(71, 82, 40, 0.35);
     };
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){

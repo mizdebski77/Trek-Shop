@@ -6,6 +6,8 @@ import { fetchProducts } from '../../core/getProducts';
 import { Loader } from '../../common/Loader/loader';
 import { Error } from '../../common/Error/error';
 import { ProductInterface } from '../../core/interface';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../Cart/cartSlice';
 
 export const Products = () => {
 
@@ -14,10 +16,17 @@ export const Products = () => {
         fetchProducts
     );
 
+    const handleAddToCart = (product: ProductInterface, e: React.MouseEvent) => {
+        e.preventDefault();
+        dispatch(addToCart(product));
+    };
+
     const url = window.location.href;
     const parts = url.split('/');
     const titleArray = parts[3];
     const title = decodeURIComponent(titleArray.replace(/\+/g, ' ')).replace(/[\/-]/g, ' ');
+    const dispatch = useDispatch();
+
 
     return (
         <Wrapper>
@@ -31,7 +40,7 @@ export const Products = () => {
                                 <ProductName>{product.name}</ProductName>
                                 <ProductDescription>{product.description}</ProductDescription>
                                 <Price>{product.price} €</Price>
-                                <CartButton>Add to cart</CartButton>
+                                <CartButton onClick={(e) => handleAddToCart(product, e)}>Add to cart</CartButton>
                             </ProductTile>
                         ))}
                     </ProductsWrapper>

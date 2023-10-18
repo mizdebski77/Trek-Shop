@@ -114,12 +114,12 @@ export const ImagesWrapper = styled(Link)`
 export const NumberOfProducts = styled.span`
     background: #7E8B56;
     position: fixed;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 6px;
     border-radius: 50%;
     color:white;
 
