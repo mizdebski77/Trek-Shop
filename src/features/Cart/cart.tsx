@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
 import { Wrapper, CartWrapper, ProductsWrapper, ProductTile, Image, OrderSection, TextWrapper, ProductTitle, ProductDescription, ProductSize, PriceWrapper, ProductPrice, ProductCount, CountButton, OrderTitle, CostsWrapper, Value, Discount, OrderContainer, Sum, NextButton, ImageWrapper, RemoveItem,} from './styledCart';
 import { useSelector, useDispatch } from "react-redux";
-import { addToCart, removeItem, selectItems } from './cartSlice';
+import {  removeItem } from './cartSlice';
 import { RootState } from '../../core/store';
-import { CartItem, ProductInterface } from '../../core/interface';
+import { CartItem } from '../../core/interface';
 import { Information } from './Information/informations';
 import { SimilarItems } from './SimilarItems/similarItems';
 

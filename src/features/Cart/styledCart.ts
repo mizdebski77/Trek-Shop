@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
-import Slider from "react-slick";
-import { css, styled } from "styled-components";
+import { styled } from "styled-components";
 
 export const Wrapper = styled.section`
 `;
-
-
 
 export const CartWrapper = styled.div`
     max-width: 1200px;
@@ -47,7 +44,7 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Image = styled.img`
-    max-width: 120px;
+    max-width: 160px;
     margin: 0 auto;
     width: 100%;
 
@@ -66,6 +63,7 @@ export const RemoveItem = styled.button`
     border: none;
     cursor: pointer;
     transition: 0.3s;
+    max-height: 40px;
 
     &:hover {
         background: #f90000; 

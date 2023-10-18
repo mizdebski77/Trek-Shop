@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { addToCart } from '../../Cart/cartSlice';
 import { ProductInterface } from '../../../core/interface';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const Product = () => {
@@ -52,7 +52,7 @@ export const Product = () => {
     const settings1 = {
         customPaging: function () {
             return (
-                <img src={product.image} />
+                <img alt="product" src={product.image} />
             );
         },
         dotsClass: "slick-dots slick-thumb",
