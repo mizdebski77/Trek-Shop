@@ -154,27 +154,3 @@ export const Price = styled.h4`
         font-size: 24px;
     };
 `;
-
-export const CartButton = styled.button`
-    color: #FFF;
-    text-align: center;
-    font-size: 24px;
-    padding: 8px;
-    font-weight: 400;
-    background: rgba(71, 82, 40, 0.71);
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-
-    &:hover {
-        background: rgba(71, 82, 40, 0.55);
-    };
-
-    &:active {
-        background: rgba(71, 82, 40, 0.35);
-    };
-
-    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
-        font-size: 16px;
-    };
-`;

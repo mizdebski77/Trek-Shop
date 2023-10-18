@@ -44,9 +44,9 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Image = styled.img`
-    max-width: 160px;
+    width: 160px;
+    height: 160px;
     margin: 0 auto;
-    width: 100%;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         max-width: 100px;

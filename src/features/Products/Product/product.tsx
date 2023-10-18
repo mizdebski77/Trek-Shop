@@ -92,7 +92,6 @@ export const Product = () => {
         saveProductsToLocalStorage(product);
     };
 
-
     return (
         <Wrapper>
             {isLoading ? <Loader /> : error ? <Error /> :
@@ -153,7 +152,6 @@ export const Product = () => {
                                             <TileTitle>{similarProduct.name}</TileTitle>
                                             <TileDesc>{similarProduct.description}</TileDesc>
                                             <TilePrice>{similarProduct.price} €</TilePrice>
-                                            <TileButton >Add to cart</TileButton>
                                         </Tile>
                                     </TileWrapper>
                                 ))}

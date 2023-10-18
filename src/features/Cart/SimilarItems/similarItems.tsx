@@ -39,7 +39,6 @@ export const SimilarItems = () => {
                         <TileTitle>Lorem</TileTitle>
                         <TileDesc>Hiking backpack queshua escape 16l</TileDesc>
                         <TilePrice>40 €</TilePrice>
-                        <TileButton>Add to cart</TileButton>
                     </Tile>
                 </TileWrapper>
 
@@ -49,7 +48,6 @@ export const SimilarItems = () => {
                         <TileTitle>Lorem</TileTitle>
                         <TileDesc>Hiking backpack queshua escape 16l</TileDesc>
                         <TilePrice>40 €</TilePrice>
-                        {/* <TileButton onClick={dispatch(addToCart(product))}>Add to cart</TileButton> */}
                     </Tile>
                 </TileWrapper>
 
@@ -59,7 +57,6 @@ export const SimilarItems = () => {
                         <TileTitle>Lorem</TileTitle>
                         <TileDesc>Hiking backpack queshua escape 16l</TileDesc>
                         <TilePrice>40 €</TilePrice>
-                        <TileButton>Add to cart</TileButton>
                     </Tile>
                 </TileWrapper>
 
@@ -69,7 +66,6 @@ export const SimilarItems = () => {
                         <TileTitle>Lorem</TileTitle>
                         <TileDesc>Hiking backpack queshua escape 16l</TileDesc>
                         <TilePrice>40 €</TilePrice>
-                        <TileButton>Add to cart</TileButton>
                     </Tile>
                 </TileWrapper>
 

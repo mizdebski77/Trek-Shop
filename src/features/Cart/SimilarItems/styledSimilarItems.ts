@@ -5,6 +5,8 @@ export const SimilarProducts = styled.div`
     max-width: 1400px;
     margin: 64px auto;
     width: 100%;
+    display: grid;
+    justify-content: center;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
         padding: 10px;
@@ -131,13 +133,15 @@ export const Tile = styled.div`
     display: grid;
     justify-content: center;
     gap: 8px;
-    max-width: 400px;
+    width: 400px;
     transition: 0.3s;
+    background: rgba(113, 113, 113, 0.13);
     padding: 40px;
     cursor: pointer;
+    min-height: 400px;
 
     &:hover {
-        background: rgba(113, 113, 113, 0.13);
+        background: #c0c0c0;
     };
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){

@@ -1,5 +1,5 @@
 import React from 'react';
-import { CartButton, FilterSelect, FilterTitle, FiltersWrapper, Option, Image, Price, ProducstNumber, ProductDescription, ProductName, ProductTile, ProductsWrapper, Title, Wrapper } from './styledProducts';
+import { FilterSelect, FilterTitle, FiltersWrapper, Option, Image, Price, ProducstNumber, ProductDescription, ProductName, ProductTile, ProductsWrapper, Title, Wrapper } from './styledProducts';
 import ex from '../../common/Images/backpack.svg';
 import { useQuery } from '@tanstack/react-query';
 import { fetchProducts } from '../../core/getProducts';
@@ -8,7 +8,8 @@ import { Error } from '../../common/Error/error';
 import { ProductInterface } from '../../core/interface';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../Cart/cartSlice';
-
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export const Products = () => {
 
     const { data, isLoading, error } = useQuery(
@@ -16,17 +17,10 @@ export const Products = () => {
         fetchProducts
     );
 
-    const handleAddToCart = (product: ProductInterface, e: React.MouseEvent) => {
-        e.preventDefault();
-        dispatch(addToCart(product));
-    };
-
     const url = window.location.href;
     const parts = url.split('/');
     const titleArray = parts[3];
     const title = decodeURIComponent(titleArray.replace(/\+/g, ' ')).replace(/[\/-]/g, ' ');
-    const dispatch = useDispatch();
-
 
     return (
         <Wrapper>
@@ -40,7 +34,6 @@ export const Products = () => {
                                 <ProductName>{product.name}</ProductName>
                                 <ProductDescription>{product.description}</ProductDescription>
                                 <Price>{product.price} €</Price>
-                                <CartButton onClick={(e) => handleAddToCart(product, e)}>Add to cart</CartButton>
                             </ProductTile>
                         ))}
                     </ProductsWrapper>
