@@ -1,3 +1,6 @@
+
+import nanoid from 'nanoid';
+
 const { nanoid } = require("nanoid");
 
 const generateId = () => nanoid();
