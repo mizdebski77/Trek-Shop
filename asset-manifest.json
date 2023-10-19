@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Trek-Shop/static/css/main.2d1a0d76.css",
-    "main.js": "/Trek-Shop/static/js/main.c3d5be6f.js",
+    "main.js": "/Trek-Shop/static/js/main.158fd96a.js",
     "static/js/787.da451c72.chunk.js": "/Trek-Shop/static/js/787.da451c72.chunk.js",
     "static/media/bg.mp4": "/Trek-Shop/static/media/bg.111dec31ce64e6c6642c.mp4",
     "static/media/backpack.svg": "/Trek-Shop/static/media/backpack.48e1ae676dcf480151bc58138870ccb9.svg",
@@ -24,11 +24,11 @@
     "static/media/error.svg": "/Trek-Shop/static/media/error.61aadec832bf78feb9fc7439f427ee58.svg",
     "static/media/spinner.svg": "/Trek-Shop/static/media/spinner.224f59c229647a22e13e190e5a6761ab.svg",
     "main.2d1a0d76.css.map": "/Trek-Shop/static/css/main.2d1a0d76.css.map",
-    "main.c3d5be6f.js.map": "/Trek-Shop/static/js/main.c3d5be6f.js.map",
+    "main.158fd96a.js.map": "/Trek-Shop/static/js/main.158fd96a.js.map",
     "787.da451c72.chunk.js.map": "/Trek-Shop/static/js/787.da451c72.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2d1a0d76.css",
-    "static/js/main.c3d5be6f.js"
+    "static/js/main.158fd96a.js"
   ]
 }
