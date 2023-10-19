@@ -1,6 +1,3 @@
-const { nanoid } = require("nanoid");
-
-const generateId = () => nanoid();
 const products = {
     Accessories: [
         {
