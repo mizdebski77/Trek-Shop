@@ -1,4 +1,4 @@
 export const fetchProducts = () => (
-    fetch("http://localhost:5000/")
+    fetch("https://trek-shop-database.onrender.com/")
         .then((response: Response) => response.json())
 );
