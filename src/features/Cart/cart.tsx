@@ -1,10 +1,11 @@
-import { Wrapper, CartWrapper, ProductsWrapper, ProductTile, Image, OrderSection, TextWrapper, ProductTitle, ProductDescription, ProductSize, PriceWrapper, ProductPrice, ProductCount, CountButton, OrderTitle, CostsWrapper, Value, Discount, OrderContainer, Sum, NextButton, ImageWrapper, RemoveItem,} from './styledCart';
+import { Wrapper, CartWrapper, ProductsWrapper, ProductTile, Image, OrderSection, TextWrapper, ProductTitle, ProductDescription, ProductSize, PriceWrapper, ProductPrice, ProductCount, CountButton, OrderTitle, CostsWrapper, Value, Discount, OrderContainer, Sum, NextButton, ImageWrapper, RemoveItem, } from './styledCart';
 import { useSelector, useDispatch } from "react-redux";
-import {  removeItem } from './cartSlice';
+import { removeItem } from './cartSlice';
 import { RootState } from '../../core/store';
 import { CartItem } from '../../core/interface';
 import { Information } from './Information/informations';
 import { SimilarItems } from './SimilarItems/similarItems';
+import { NoItemsCart } from './NoItemsCart/noItemsCart';
 
 export const Cart = () => {
 
@@ -13,57 +14,64 @@ export const Cart = () => {
 
     const dispatch = useDispatch();
 
+    console.log(products.length);
+
+
     return (
         <Wrapper>
             <Information />
+            {products.length > 0 ? (
 
-            <CartWrapper>
-                <ProductsWrapper>
-                    {products.map((product: CartItem) => (
-                        <ProductTile>
-                            <ImageWrapper>
-                                <Image src={product.image} />
-                                <RemoveItem onClick={() => dispatch(removeItem(product.id))} >Remove Item</RemoveItem>
-                            </ImageWrapper>
-                            <TextWrapper>
-                                <ProductTitle>
-                                    {product.name}
-                                </ProductTitle>
-                                <ProductDescription>{product.description}</ProductDescription>
-                                <ProductSize>Size: M</ProductSize>
-                                <PriceWrapper>
-                                    <ProductPrice>{product.price} €</ProductPrice>
-                                    <ProductCount>
-                                        <CountButton >-</CountButton>
-                                        1
-                                        <CountButton >+</CountButton>
-                                    </ProductCount>
-                                </PriceWrapper>
-                            </TextWrapper>
-                        </ProductTile>
-                    ))}
-                </ProductsWrapper>
+                <>
+                    <CartWrapper>
+                        <ProductsWrapper>
+                            {products.map((product: CartItem) => (
+                                <ProductTile>
+                                    <ImageWrapper>
+                                        <Image src={product.image} />
+                                        <RemoveItem onClick={() => dispatch(removeItem(product.id))} >Remove Item</RemoveItem>
+                                    </ImageWrapper>
+                                    <TextWrapper>
+                                        <ProductTitle>
+                                            {product.name}
+                                        </ProductTitle>
+                                        <ProductDescription>{product.description}</ProductDescription>
+                                        <ProductSize>Size: M</ProductSize>
+                                        <PriceWrapper>
+                                            <ProductPrice>{product.price} €</ProductPrice>
+                                            <ProductCount>
+                                                <CountButton >-</CountButton>
+                                                1
+                                                <CountButton >+</CountButton>
+                                            </ProductCount>
+                                        </PriceWrapper>
+                                    </TextWrapper>
+                                </ProductTile>
+                            ))}
+                        </ProductsWrapper>
 
-                <OrderSection>
-                    <OrderTitle>Your order</OrderTitle>
-                    <OrderContainer>
-                        <CostsWrapper>
-                            <Value>Value of products</Value>
-                            <Value>{totalAmount.toFixed(2)} €</Value>
-                        </CostsWrapper>
-                        <Discount>I have a discount code</Discount>
-                    </OrderContainer>
-                    <OrderContainer>
-                        <CostsWrapper>
-                            <Sum>Sum</Sum>
-                            <Sum>{totalAmount.toFixed(2)} €</Sum>
-                        </CostsWrapper>
-                    </OrderContainer>
-                    <NextButton to='/LogIn'>Next</NextButton>
-                </OrderSection>
-            </CartWrapper>
+                        <OrderSection>
+                            <OrderTitle>Your order</OrderTitle>
+                            <OrderContainer>
+                                <CostsWrapper>
+                                    <Value>Value of products</Value>
+                                    <Value>{totalAmount.toFixed(2)} €</Value>
+                                </CostsWrapper>
+                                <Discount>I have a discount code</Discount>
+                            </OrderContainer>
+                            <OrderContainer>
+                                <CostsWrapper>
+                                    <Sum>Sum</Sum>
+                                    <Sum>{totalAmount.toFixed(2)} €</Sum>
+                                </CostsWrapper>
+                            </OrderContainer>
+                            <NextButton to='/LogIn'>Next</NextButton>
+                        </OrderSection>
+                    </CartWrapper>
 
-            <SimilarItems />
+                    <SimilarItems />
+                </>
+            ) : <NoItemsCart />}
         </Wrapper>
 
     );
