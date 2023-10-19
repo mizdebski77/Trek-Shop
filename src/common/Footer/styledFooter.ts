@@ -92,16 +92,22 @@ export const SocialImg = styled.img`
 `;
 
 export const FormWrapper = styled.div`
-    display: grid;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
     gap: 20px;
-
+    
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         gap: 10px;
     };
 `;
 
 export const FooterForm = styled.form`
+    display: grid;
+    gap: 20px;
+`;
+
+export const InputWrapper = styled.div`
 
 `;
 
