@@ -122,7 +122,6 @@ export const Product = () => {
                                 draggable
                                 pauseOnHover={false}
                                 theme="dark"
-
                             />
                             <ShortDescriptionWrapper>
                                 <ShortDescription>{product.mediumDescription}</ShortDescription>

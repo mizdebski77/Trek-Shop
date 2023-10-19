@@ -296,7 +296,7 @@ export const SimilarSwiper = styled(Slider)`
     margin: 0 auto;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.firstBP}px){
-        max-width: 1000px;
+        max-width: 1200px;
     };
 
     @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
@@ -409,8 +409,14 @@ export const Tile = styled.div`
         background: #c0c0c0;
     };
 
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
+        padding: 20px;
+        width: 300px;
+    };
+
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         padding: 20px;
+        width: 240px;
     };
 `;
 
