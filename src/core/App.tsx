@@ -8,6 +8,7 @@ import { LogInPanel } from "../features/LogInPanel/logInPanel";
 import { Registration } from "../features/Registration/registration";
 import { Products } from "../features/Products/products";
 import { CartLogInPanel } from "../features/Cart/LogInCart/cartLogIn";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -26,6 +27,18 @@ function App() {
         <Route path="/LogIn" element={<CartLogInPanel />} />
         <Route path="/Registration" element={<Registration />} />
       </Routes>
+      <ToastContainer
+        position="bottom-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="dark"
+      />
       <Footer />
     </BrowserRouter>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { About, Button, ShortDescriptionWrapper, Image, Price, PriceCartWrapper, ProductTile, ReadMore, ShortDescription, TextWrapper, Title, Wrapper, DescriptionWrapper, DescriptionImg, DescriptionText, DesciptionTitle, Description, DescriptionContainer, CustomSlider, SimilarProducts, SimilarTitle, SimilarSwiper, Tile, TileImg, TileTitle, TileDesc, TilePrice, TileButton, TileWrapper, ToastWrapper } from './styledProduct';
+import { About, Button, ShortDescriptionWrapper, Image, Price, PriceCartWrapper, ProductTile, ReadMore, ShortDescription, TextWrapper, Title, Wrapper, DescriptionWrapper, DescriptionImg, DescriptionText, DesciptionTitle, Description, DescriptionContainer, CustomSlider, SimilarProducts, SimilarTitle, SimilarSwiper, Tile, TileImg, TileTitle, TileDesc, TilePrice,  TileWrapper, } from './styledProduct';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useQuery } from '@tanstack/react-query';
@@ -111,18 +111,7 @@ export const Product = () => {
                                 <Price>{product.price} €</Price>
                                 <Button onClick={() => { handleAddToCart(product); notify(); }}>Add to cart</Button>
                             </PriceCartWrapper>
-                            <ToastWrapper
-                                position="bottom-left"
-                                autoClose={5000}
-                                hideProgressBar={false}
-                                newestOnTop={false}
-                                closeOnClick
-                                rtl={false}
-                                pauseOnFocusLoss
-                                draggable
-                                pauseOnHover={false}
-                                theme="dark"
-                            />
+
                             <ShortDescriptionWrapper>
                                 <ShortDescription>{product.mediumDescription}</ShortDescription>
                                 <ReadMore to='description'

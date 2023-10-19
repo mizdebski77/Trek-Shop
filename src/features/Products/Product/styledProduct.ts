@@ -2,7 +2,6 @@ import { Link } from "react-scroll";
 import Slider from "react-slick";
 import { styled } from "styled-components";
 import { Link as TileLink } from 'react-router-dom';
-import { ToastContainer } from "react-toastify";
 export const Wrapper = styled.section`
     min-height: 100vh;
 `;
@@ -420,10 +419,3 @@ export const Tile = styled.div`
     };
 `;
 
-export const ToastWrapper = styled(ToastContainer)`
-    width: 30%;
-
-    @media (max-width: 768px) {
-        width: 100%;
-    };
-`;  

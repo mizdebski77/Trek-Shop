@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Caption, Input, SendForm, SubButton, Wrapper } from './styledNewsletter';
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const Newsletter = () => {
@@ -14,18 +14,6 @@ export const Newsletter = () => {
             <SendForm>
                 <Input placeholder='E-Mail' />
                 <SubButton onClick={notify}>Subscribe</SubButton>
-                <ToastContainer
-                    position="bottom-left"
-                    autoClose={5000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover={false}
-                    theme="dark"
-                />
             </SendForm>
         </Wrapper>
     );

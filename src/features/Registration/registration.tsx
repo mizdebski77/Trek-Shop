@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Input, InputWrapper, CreateAccountButton, RegistrationContainer, RegistrationWrapper, Span, Title, Wrapper } from './styledRegistration';
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const Registration = () => {
@@ -38,18 +38,6 @@ export const Registration = () => {
                         <Input placeholder='Password' type='password' required onChange={({ target }) => setPassword(target.value)} />
                     </InputWrapper>
                     <CreateAccountButton onClick={register}>Create an account</CreateAccountButton>
-                    <ToastContainer
-                        position="bottom-left"
-                        autoClose={5000}
-                        hideProgressBar={false}
-                        newestOnTop={false}
-                        closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover={false}
-                        theme="dark"
-                    />
                 </RegistrationContainer>
             </RegistrationWrapper>
         </Wrapper>

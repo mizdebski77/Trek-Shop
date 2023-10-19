@@ -5,8 +5,7 @@ import fb from '../Images/Socials/fb.svg';
 import insta from '../Images/Socials/insta.svg';
 import x from '../Images/Socials/x.svg';
 import yt from '../Images/Socials/yt.svg';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import {  toast } from 'react-toastify';
 
 export const Footer = () => {
     const [email, setEmail] = useState('');
@@ -72,18 +71,6 @@ export const Footer = () => {
                             />                            <CheckboxText>I confirm that I have read TrekShop Privacy Policy and consent to the processing of my personal data for marketing and profiling purposes.</CheckboxText>
                         </CheckBoxWrapper>
                     </FooterForm>
-                    <ToastContainer
-                        position="bottom-left"
-                        autoClose={5000}
-                        hideProgressBar={false}
-                        newestOnTop={false}
-                        closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover={false}
-                        theme="dark"
-                    />
                 </FormWrapper>
             </Container>
             <Logo to='/hej'>TREK<LogoSpan>Shop</LogoSpan> </Logo>

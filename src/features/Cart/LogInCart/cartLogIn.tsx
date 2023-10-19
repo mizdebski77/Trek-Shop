@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Input, InputWrapper, LogInButton, LogInContainer, LogInWrapper, NewAccount, Span, Title, Wrapper } from './styledCartLogin';
 import { Information } from '../Information/informations';
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 export const CartLogInPanel = () => {
 
@@ -32,18 +32,6 @@ export const CartLogInPanel = () => {
                         <Input required placeholder='Password' type='password' onChange={({ target }) => setPassword(target.value)} />
                     </InputWrapper>
                     <LogInButton disabled={email.length === 0 || password.length === 0} onClick={register}>Log in</LogInButton>
-                    <ToastContainer
-                        position="bottom-left"
-                        autoClose={5000}
-                        hideProgressBar={false}
-                        newestOnTop={false}
-                        closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover={false}
-                        theme="dark"
-                    />
                 </LogInContainer>
 
                 <NewAccount to='/Registration'>Create an account</NewAccount>
