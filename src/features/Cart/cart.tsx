@@ -4,7 +4,6 @@ import { removeItem } from './cartSlice';
 import { RootState } from '../../core/store';
 import { CartItem } from '../../core/interface';
 import { Information } from './Information/informations';
-import { SimilarItems } from './SimilarItems/similarItems';
 import { NoItemsCart } from './NoItemsCart/noItemsCart';
 
 export const Cart = () => {
@@ -68,8 +67,6 @@ export const Cart = () => {
                             <NextButton to='/LogIn'>Next</NextButton>
                         </OrderSection>
                     </CartWrapper>
-
-                    <SimilarItems />
                 </>
             ) : <NoItemsCart />}
         </Wrapper>

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 export const Wrapper = styled.section`
+    min-height: 100vh;
 `;
 
 export const CartWrapper = styled.div`

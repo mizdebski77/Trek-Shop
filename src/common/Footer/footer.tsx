@@ -5,13 +5,12 @@ import fb from '../Images/Socials/fb.svg';
 import insta from '../Images/Socials/insta.svg';
 import x from '../Images/Socials/x.svg';
 import yt from '../Images/Socials/yt.svg';
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 export const Footer = () => {
     const [email, setEmail] = useState('');
     const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
 
-    const notify = () => toast.success("Thank you for your subscription");
 
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
@@ -68,7 +67,8 @@ export const Footer = () => {
                                 type='checkbox'
                                 checked={isCheckboxChecked}
                                 onChange={handleCheckboxChange}
-                            />                            <CheckboxText>I confirm that I have read TrekShop Privacy Policy and consent to the processing of my personal data for marketing and profiling purposes.</CheckboxText>
+                            />
+                            <CheckboxText>I confirm that I have read TrekShop Privacy Policy and consent to the processing of my personal data for marketing and profiling purposes.</CheckboxText>
                         </CheckBoxWrapper>
                     </FooterForm>
                 </FormWrapper>
