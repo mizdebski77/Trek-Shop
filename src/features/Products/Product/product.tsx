@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { About, Button, ShortDescriptionWrapper, Image, Price, PriceCartWrapper, ProductTile, ReadMore, ShortDescription, TextWrapper, Title, Wrapper, DescriptionWrapper, DescriptionImg, DescriptionText, DesciptionTitle, Description, DescriptionContainer, CustomSlider, SimilarProducts, SimilarTitle, SimilarSwiper, Tile, TileImg, TileTitle, TileDesc, TilePrice, TileWrapper, ProductCount, CountButton, } from './styledProduct';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,6 +17,7 @@ export const Product = () => {
 
     const [count, setCount] = useState(1)
 
+
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -29,6 +30,10 @@ export const Product = () => {
         ["product"],
         fetchProducts
     );
+
+    useEffect(() => {
+        setCount(1);
+    }, [productID, category]);
 
     const getProductById = (id: string) => {
         if (data && data[category]) {
