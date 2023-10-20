@@ -140,6 +140,15 @@ export const CountButton = styled.button`
     cursor: pointer;
     transition: 0.3s;
 
+    &:disabled {
+        cursor: no-drop;
+        background: rgba(126, 139, 86, 0.12);
+
+        &:hover {
+            background: rgba(126, 139, 86, 0.12);
+        }
+    };
+
     &:hover {
         background: rgba(126, 139, 86, 0.32);
     };

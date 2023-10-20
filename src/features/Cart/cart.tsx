@@ -1,10 +1,13 @@
 import { Wrapper, CartWrapper, ProductsWrapper, ProductTile, Image, OrderSection, TextWrapper, ProductTitle, ProductDescription, ProductSize, PriceWrapper, ProductPrice, ProductCount, CountButton, OrderTitle, CostsWrapper, Value, Discount, OrderContainer, Sum, NextButton, ImageWrapper, RemoveItem, } from './styledCart';
 import { useSelector, useDispatch } from "react-redux";
-import { removeItem } from './cartSlice';
+import { addToCart, decraseCart, removeItem } from './cartSlice';
 import { RootState } from '../../core/store';
 import { CartItem } from '../../core/interface';
 import { Information } from './Information/informations';
 import { NoItemsCart } from './NoItemsCart/noItemsCart';
+import { toast } from 'react-toastify';
+import AlertConfirm from 'react-alert-confirm';
+import "react-alert-confirm/lib/style.css";
 
 export const Cart = () => {
 
@@ -13,8 +16,13 @@ export const Cart = () => {
 
     const dispatch = useDispatch();
 
-    console.log(products.length);
-
+    const openAlert = (product: CartItem) => {
+        AlertConfirm({
+            title: "Are you sure?",
+            desc: `You will delete ${product.name} from your cart`,
+            onOk: () => dispatch(removeItem(product.id))
+        });
+    }
 
     return (
         <Wrapper>
@@ -28,7 +36,7 @@ export const Cart = () => {
                                 <ProductTile>
                                     <ImageWrapper>
                                         <Image src={product.image} />
-                                        <RemoveItem onClick={() => dispatch(removeItem(product.id))} >Remove Item</RemoveItem>
+                                        <RemoveItem onClick={() => openAlert(product)} >Remove Item</RemoveItem>
                                     </ImageWrapper>
                                     <TextWrapper>
                                         <ProductTitle>
@@ -39,9 +47,9 @@ export const Cart = () => {
                                         <PriceWrapper>
                                             <ProductPrice>{product.price} €</ProductPrice>
                                             <ProductCount>
-                                                <CountButton >-</CountButton>
-                                                1
-                                                <CountButton >+</CountButton>
+                                                <CountButton disabled={product.cartQuantity === 1} onClick={() => dispatch(decraseCart(product))} >-</CountButton>
+                                                {product.cartQuantity}
+                                                <CountButton onClick={() => dispatch(addToCart(product))}  >+</CountButton>
                                             </ProductCount>
                                         </PriceWrapper>
                                     </TextWrapper>
