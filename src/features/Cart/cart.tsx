@@ -5,7 +5,6 @@ import { RootState } from '../../core/store';
 import { CartItem } from '../../core/interface';
 import { Information } from './Information/informations';
 import { NoItemsCart } from './NoItemsCart/noItemsCart';
-import { toast } from 'react-toastify';
 import AlertConfirm from 'react-alert-confirm';
 import "react-alert-confirm/lib/style.css";
 
