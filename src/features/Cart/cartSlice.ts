@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { CartItem } from "../../core/interface";
-import { toast } from "react-toastify";
 
 interface CartState {
     cartItems: CartItem[];
@@ -28,9 +27,7 @@ const cartSlice = createSlice({
                     ...state.cartItems[existingIndex],
                     cartQuantity: state.cartItems[existingIndex].cartQuantity + 1,
                 };
-                toast.info("Increased product quantity", {
-                    position: "bottom-left",
-                });
+
             } else {
                 state.cartItems.push({ ...action.payload, cartQuantity: 1 });
             }
@@ -60,9 +57,6 @@ const cartSlice = createSlice({
             if (itemIndex !== -1) {
                 state.cartItems[itemIndex].cartQuantity -= 1;
                 state.cartTotalAmount -= action.payload.price;
-                toast.info("Decrased product quantity", {
-                    position: "bottom-left",
-                });
             } else {
             }
         }

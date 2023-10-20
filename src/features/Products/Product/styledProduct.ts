@@ -101,11 +101,10 @@ export const About = styled.h2`
 
 export const PriceCartWrapper = styled.div`
     max-width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 40px;
     display: flex;
     justify-content: space-around;
-    margin-bottom: 80px;
-
+    
     @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
         flex-direction: column;
         align-items: center;
@@ -115,6 +114,40 @@ export const PriceCartWrapper = styled.div`
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         gap: 10px;
         margin-bottom: 20px;
+    };
+`;
+
+export const ProductCount = styled.div`
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+`;
+
+export const CountButton = styled.button`
+    background: rgba(126, 139, 86, 0.42);
+    border: none;
+    font-size: 20px;
+    padding: 2px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:disabled {
+        cursor: no-drop;
+        background: rgba(126, 139, 86, 0.12);
+
+        &:hover {
+            background: rgba(126, 139, 86, 0.12);
+        }
+    };
+
+    &:hover {
+        background: rgba(126, 139, 86, 0.32);
+    };
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
     };
 `;
 

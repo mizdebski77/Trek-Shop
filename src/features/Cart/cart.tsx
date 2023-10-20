@@ -7,6 +7,7 @@ import { Information } from './Information/informations';
 import { NoItemsCart } from './NoItemsCart/noItemsCart';
 import AlertConfirm from 'react-alert-confirm';
 import "react-alert-confirm/lib/style.css";
+import { toast } from 'react-toastify';
 
 export const Cart = () => {
 
@@ -21,7 +22,15 @@ export const Cart = () => {
             desc: `You will delete ${product.name} from your cart`,
             onOk: () => dispatch(removeItem(product.id))
         });
-    }
+    };
+
+    const decreasedInfo = () => toast.info("Decreased product quantity", {
+        position: "bottom-left",
+    });
+
+    const increasedInfo = () => toast.info("Increased product quantity", {
+        position: "bottom-left",
+    });
 
     return (
         <Wrapper>
@@ -46,9 +55,9 @@ export const Cart = () => {
                                         <PriceWrapper>
                                             <ProductPrice>{product.price} €</ProductPrice>
                                             <ProductCount>
-                                                <CountButton disabled={product.cartQuantity === 1} onClick={() => dispatch(decraseCart(product))} >-</CountButton>
+                                                <CountButton disabled={product.cartQuantity === 1} onClick={() => { dispatch(decraseCart(product)); decreasedInfo(); }}>-</CountButton>
                                                 {product.cartQuantity}
-                                                <CountButton onClick={() => dispatch(addToCart(product))}  >+</CountButton>
+                                                <CountButton onClick={() => { dispatch(addToCart(product)); increasedInfo(); }} >+</CountButton>
                                             </ProductCount>
                                         </PriceWrapper>
                                     </TextWrapper>
@@ -75,8 +84,9 @@ export const Cart = () => {
                         </OrderSection>
                     </CartWrapper>
                 </>
-            ) : <NoItemsCart />}
-        </Wrapper>
+            ) : <NoItemsCart />
+            }
+        </Wrapper >
 
     );
 };

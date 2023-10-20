@@ -1,5 +1,5 @@
-import React from 'react';
-import { About, Button, ShortDescriptionWrapper, Image, Price, PriceCartWrapper, ProductTile, ReadMore, ShortDescription, TextWrapper, Title, Wrapper, DescriptionWrapper, DescriptionImg, DescriptionText, DesciptionTitle, Description, DescriptionContainer, CustomSlider, SimilarProducts, SimilarTitle, SimilarSwiper, Tile, TileImg, TileTitle, TileDesc, TilePrice,  TileWrapper, } from './styledProduct';
+import React, { useState } from 'react';
+import { About, Button, ShortDescriptionWrapper, Image, Price, PriceCartWrapper, ProductTile, ReadMore, ShortDescription, TextWrapper, Title, Wrapper, DescriptionWrapper, DescriptionImg, DescriptionText, DesciptionTitle, Description, DescriptionContainer, CustomSlider, SimilarProducts, SimilarTitle, SimilarSwiper, Tile, TileImg, TileTitle, TileDesc, TilePrice, TileWrapper, ProductCount, CountButton, } from './styledProduct';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useQuery } from '@tanstack/react-query';
@@ -15,6 +15,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export const Product = () => {
 
+    const [count, setCount] = useState(1)
+
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -27,15 +29,6 @@ export const Product = () => {
         ["product"],
         fetchProducts
     );
-
-    const saveProductsToLocalStorage = (product: ProductInterface) => {
-        const existingProductsJSON = localStorage.getItem('products');
-        const existingProducts = existingProductsJSON ? JSON.parse(existingProductsJSON) : [];
-        existingProducts.push(product);
-        localStorage.setItem('products', JSON.stringify(existingProducts));
-    };
-
-
 
     const getProductById = (id: string) => {
         if (data && data[category]) {
@@ -87,9 +80,11 @@ export const Product = () => {
         ],
     };
 
-    const handleAddToCart = (product: ProductInterface) => {
-        dispatch(addToCart(product));
-        saveProductsToLocalStorage(product);
+    const handleAddToCart = (product: ProductInterface, count: number) => {
+        for (let i = 0; i < count; i++) {
+            const productWithCount = { ...product, count: 1 };
+            dispatch(addToCart(productWithCount));
+        }
     };
 
     return (
@@ -109,8 +104,14 @@ export const Product = () => {
                             <About>{product.description}</About>
                             <PriceCartWrapper>
                                 <Price>{product.price} €</Price>
-                                <Button onClick={() => { handleAddToCart(product); notify(); }}>Add to cart</Button>
+                                <Button onClick={() => { handleAddToCart(product, count); notify(); }}>Add to cart</Button>
                             </PriceCartWrapper>
+
+                            <ProductCount>
+                                <CountButton disabled={count === 1} onClick={() => setCount(count - 1)}>-</CountButton>
+                                {count}
+                                <CountButton onClick={() => setCount(count + 1)} >+</CountButton>
+                            </ProductCount>
 
                             <ShortDescriptionWrapper>
                                 <ShortDescription>{product.mediumDescription}</ShortDescription>
