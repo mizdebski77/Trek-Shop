@@ -109,6 +109,12 @@ export const ImagesWrapper = styled(Link)`
     text-align: center;
     color: black;
     text-decoration: none;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
+        max-width: 100px;
+        justify-content: center;
+        margin: 0 auto;
+    };
 `;
 
 export const NumberOfProducts = styled.span`
@@ -125,7 +131,13 @@ export const NumberOfProducts = styled.span`
 
     &:disabled {
         display: none;
-    }
+    };
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
+        width: 24px;
+        height: 24px;
+        
+    };
 `;
 
 export const Caption = styled.span`

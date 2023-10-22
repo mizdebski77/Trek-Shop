@@ -79,7 +79,7 @@ export const Image = styled.img`
     max-height: 320px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
-        max-width: 140px;
+        max-width: 180px;
     };
 `;
 
@@ -125,6 +125,14 @@ export const FiltersWrapper = styled.div`
     display: flex;
     align-items: center;
     gap: 40px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        gap: 10px;
+        padding: 10px;
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    };
 `;
 
 export const FilterTitle = styled.h2`
@@ -132,6 +140,10 @@ export const FilterTitle = styled.h2`
     font-size: 28px;
     font-weight: 400;
     margin: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 24px;
+    };
 `;
 
 export const FilterOption = styled.h3`
@@ -140,6 +152,10 @@ export const FilterOption = styled.h3`
     margin: 0;
     cursor: pointer;
     transition: 0.3s;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+        font-size: 16px;
+    };
 
     &:hover {
         color: #dfdfdf;

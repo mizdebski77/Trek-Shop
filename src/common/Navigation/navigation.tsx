@@ -82,7 +82,11 @@ export const Navigation = () => {
                             </ImagesWrapper>
 
                             <ImagesWrapper to='/cart'>
-                                <NumberOfProducts>2</NumberOfProducts>
+                                {products.length > 0 && (
+                                    <NumberOfProducts>
+                                        {products.length}
+                                    </NumberOfProducts>
+                                )}
                                 <SvgImage src={cart} />
                                 <Caption>Cart</Caption>
                             </ImagesWrapper>

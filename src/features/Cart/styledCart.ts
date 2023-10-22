@@ -30,7 +30,7 @@ export const ProductTile = styled.div`
     max-height: 280px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
-        padding: 20px;
+        padding: 20px 10px;
     };
 `;
 
@@ -50,7 +50,7 @@ export const Image = styled.img`
     margin: 0 auto;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
-        max-width: 100px;
+        max-width: 140px;
     };
 `;
 

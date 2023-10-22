@@ -6,6 +6,7 @@ export const Wrapper = styled.section`
     margin: 0 auto;
     min-height: 80vh;
     padding: 0 10px;
+    margin: 0 0 20px 0;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         min-height: 60vh;
