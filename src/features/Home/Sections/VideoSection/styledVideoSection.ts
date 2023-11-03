@@ -15,6 +15,7 @@ export const Wrapper = styled.section`
 export const Video = styled.video`
     width: 100%;
     object-fit: contain;
+    
 `;
 
 export const TextWrapper = styled.div`

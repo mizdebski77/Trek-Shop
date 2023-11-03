@@ -6,7 +6,7 @@ import { scrollTop } from '../../../../core/scrollTop';
 export const VideoSection = () => {
     return (
         <Wrapper>
-            <Video src={bgvideo} autoPlay loop muted />
+            <Video src={bgvideo} autoPlay loop muted playsInline />
             <TextWrapper>
                 <Logo>TREK<LogoSpan>Shop</LogoSpan></Logo>
                 <Caption>Join the group of satisfied customers </Caption>
