@@ -60,7 +60,17 @@ const products = {
             image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952247/TrekShop/Accessories/2_kksyw4.png',
             category: 'Accessories'
         },
-    
+
+        {
+            id: "2saf81bdu9",
+            name: "Water Flask",
+            description: "Durable water flask for on-the-go hydration.",
+            longDescription: "The Water Flask is your reliable companion for staying hydrated on the go. This durable flask is designed for convenience and functionality. It's perfect for outdoor adventures, workouts, or everyday use. With a leak-proof design and an easy-to-carry handle, this flask ensures you have access to refreshing water whenever you need it. The flask's construction is built to withstand the rigors of outdoor activities, making it an essential part of your gear. The Water Flask's spacious capacity allows you to carry enough water to keep you going, and the double-wall insulation helps maintain your beverage's temperature. Whether you're hiking, biking, or simply running errands, this flask is a versatile choice for staying refreshed throughout the day.",
+            mediumDescription: "Stay hydrated on the go with our durable Water Flask. Perfect for outdoor activities or daily use, it's designed for convenience and reliability.",
+            price: 14.99,
+            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952244/TrekShop/Accessories/6_y8tmn6.png',
+            category: 'Accessories'
+        },   
 
         {
             id: "113fsadgsa",
@@ -78,7 +88,7 @@ const products = {
             description: "Compact sleeping bag.",
             longDescription: "The Sleeping Bag is designed for a comfortable night's sleep during your camping trips. This compact sleeping bag is lightweight and easy to carry in your backpack. It provides excellent insulation and warmth, ensuring you stay cozy even in chilly nights. Get a good night's rest with this reliable sleeping bag. Camping under the starry night sky has never been this comfortable. The compact Sleeping Bag is your ticket to a cozy and warm night's sleep in the great outdoors. Its lightweight design ensures it won't weigh you down during your hikes, and its compact size makes it easy to stow in your backpack. Despite its portability, this sleeping bag offers excellent insulation to keep you warm on those chilly nights. The high-quality materials trap body heat, ensuring you stay snug and comfortable. The zipper is easy to use, allowing you to get in and out without any hassle. With this sleeping bag, you'll wake up refreshed and ready for your next day of adventure. Get ready for a night of restful sleep with this reliable companion.",
             price: 9.99,
-            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696954282/TrekShop/Accessories/3_xfke21.png',
+            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952243/TrekShop/Accessories/10_frs0zm.png',
             category: 'Accessories'
         },
     ],
