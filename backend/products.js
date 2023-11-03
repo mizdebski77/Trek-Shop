@@ -7,7 +7,6 @@ const products = {
             image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952257/TrekShop/Accessories/1_nsoqic.png',
             longDescription: "The Carabiner is an essential tool for outdoor enthusiasts. This versatile carabiner can be used for a wide range of purposes, including securing gear, attaching items to your backpack, and more. Its durable construction ensures reliable performance in various outdoor conditions. Whether you're an avid rock climber, a backpacker, or a camper, this carabiner is a versatile and dependable companion for your adventures. Its sturdy design and reliable locking mechanism provide peace of mind when you need to secure your gear, set up a makeshift clothesline, or simply hang your essentials within easy reach. The Carabiner is built to withstand the elements, with rust-resistant materials that ensure it won't corrode even in wet conditions. Its ergonomic shape fits comfortably in your hand and is easy to clip and unclip, making it a breeze to use. This carabiner is an indispensable accessory for outdoor enthusiasts who demand quality and versatility in their gear. Add it to your kit today and experience the convenience and reliability it brings to your outdoor excursions.",
             mediumDescription: "The versatile Carabiner, an essential tool for outdoor enthusiasts, ensures gear security. Its rust-resistant build guarantees durability in various conditions.",
-
             price: 39.99,
             category: 'Accessories'
         },
@@ -18,13 +17,14 @@ const products = {
             longDescription: "The Trekking Poles provide stability and support during your hikes and treks. These sturdy poles are adjustable to suit your height and terrain. They help reduce strain on your knees and improve balance on uneven trails. With comfortable grips and durable materials, they are a valuable addition to your outdoor gear. Whether you're traversing steep mountain paths or enjoying a leisurely walk in the woods, these trekking poles will become your trusted companions. They are crafted from lightweight yet robust materials that can withstand the rigors of the trail. The adjustable height feature ensures they can be tailored to your specific needs, and the comfortable grips reduce hand fatigue during long treks. By distributing your weight and providing additional points of contact with the ground, these trekking poles reduce the impact on your knees and ankles. They're also great for maintaining balance and stability when crossing streams or navigating rocky terrain. Don't let rough trails hold you back; conquer them with the support of these reliable trekking poles.",
             price: 15.49,
             mediumDescription: "Sturdy Trekking Poles offer balance and support on uneven trails. Adjustable height and durable design make them ideal for hikers.",
-            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952262/TrekShop/Accessories/5_hb6huo.png',
+            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1699001185/TrekShop/Accessories/pngwing.com_13_pkiq9r.png',
             category: 'Accessories'
         },
         {
             id: "1dg4xsa",
             name: "Carabiner",
             description: "Versatile carabiner.",
+            mediumDescription: "The versatile Carabiner, an essential tool for outdoor enthusiasts, ensures gear security. Its rust-resistant build guarantees durability in various conditions.",
             longDescription: "The Carabiner is an essential tool for outdoor enthusiasts. This versatile carabiner can be used for a wide range of purposes, including securing gear, attaching items to your backpack, and more. Its durable construction ensures reliable performance in various outdoor conditions. Whether you're an avid rock climber, a backpacker, or a camper, this carabiner is a versatile and dependable companion for your adventures. Its sturdy design and reliable locking mechanism provide peace of mind when you need to secure your gear, set up a makeshift clothesline, or simply hang your essentials within easy reach. The Carabiner is built to withstand the elements, with rust-resistant materials that ensure it won't corrode even in wet conditions. Its ergonomic shape fits comfortably in your hand and is easy to clip and unclip, making it a breeze to use. This carabiner is an indispensable accessory for outdoor enthusiasts who demand quality and versatility in their gear. Add it to your kit today and experience the convenience and reliability it brings to your outdoor excursions.",
             price: 8.99,
             image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952257/TrekShop/Accessories/1_nsoqic.png',
@@ -42,7 +42,7 @@ const products = {
         },
         {
             id: "1d3ccgsa",
-            name: "Sleeping Bag",
+            name: "Crampons",
             description: "Compact sleeping bag.",
             longDescription: "The Sleeping Bag is designed for a comfortable night's sleep during your camping trips. This compact sleeping bag is lightweight and easy to carry in your backpack. It provides excellent insulation and warmth, ensuring you stay cozy even in chilly nights. Get a good night's rest with this reliable sleeping bag. Camping under the starry night sky has never been this comfortable. The compact Sleeping Bag is your ticket to a cozy and warm night's sleep in the great outdoors. Its lightweight design ensures it won't weigh you down during your hikes, and its compact size makes it easy to stow in your backpack. Despite its portability, this sleeping bag offers excellent insulation to keep you warm on those chilly nights. The high-quality materials trap body heat, ensuring you stay snug and comfortable. The zipper is easy to use, allowing you to get in and out without any hassle. With this sleeping bag, you'll wake up refreshed and ready for your next day of adventure. Get ready for a night of restful sleep with this reliable companion.",
             mediumDescription: "The Compact Sleeping Bag offers cozy warmth for camping trips. Its lightweight, insulated design ensures a comfortable night's sleep.",
@@ -71,14 +71,14 @@ const products = {
             category: 'Accessories'
         },
         {
-            id: "1d13csgsa",
-            name: "Sleeping Bag",
-            description: "Compact sleeping bag.",
-            longDescription: "The Sleeping Bag is designed for a comfortable night's sleep during your camping trips. This compact sleeping bag is lightweight and easy to carry in your backpack. It provides excellent insulation and warmth, ensuring you stay cozy even in chilly nights. Get a good night's rest with this reliable sleeping bag. Camping under the starry night sky has never been this comfortable. The compact Sleeping Bag is your ticket to a cozy and warm night's sleep in the great outdoors. Its lightweight design ensures it won't weigh you down during your hikes, and its compact size makes it easy to stow in your backpack. Despite its portability, this sleeping bag offers excellent insulation to keep you warm on those chilly nights. The high-quality materials trap body heat, ensuring you stay snug and comfortable. The zipper is easy to use, allowing you to get in and out without any hassle. With this sleeping bag, you'll wake up refreshed and ready for your next day of adventure. Get ready for a night of restful sleep with this reliable companion.",
-            mediumDescription: "The TrailSeeker 35, a lightweight 35L backpack, combines functionality and comfort. It features a hydration reservoir sleeve and adjustable shoulder straps.",
-            price: 14.99,
-            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952244/TrekShop/Accessories/6_y8tmn6.png',
-            category: 'Accessories'
+            id: "1dgs3zxcs2gfa",
+            name: "Hydration Reservoir",
+            description: "Convenient hydration reservoir.",
+            longDescription: "The Hydration Reservoir is a must-have for staying hydrated on the trail. This reservoir can be easily integrated into your backpack, providing a convenient way to drink while on the move. It has a large capacity and a leak-proof design. Stay refreshed during your treks with this hydration reservoir. Staying hydrated during your outdoor adventures is crucial, and the Hydration Reservoir ensures you have easy access to water whenever you need it. It's designed for convenience and efficiency, easily integrating into your backpack so you can sip water on the go. With a large capacity, it can quench your thirst during long hikes or intense activities. The leak-proof design ensures that your gear stays dry, even when the going gets tough. Its high-quality construction guarantees a long-lasting and dependable performance. Don't let dehydration slow you down; stay refreshed and energized with this essential hydration reservoir by your side.",
+            mediumDescription: "The Hydration Reservoir is essential for staying hydrated on the move. Its leak-proof design and large capacity ensure you're refreshed during your treks.",
+            price: 24.99,
+            category: 'Accessories',
+            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952243/TrekShop/Accessories/10_frs0zm.png',
         },
         {
             id: "113fsadgsa",

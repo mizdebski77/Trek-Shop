@@ -3,10 +3,9 @@ import { styled } from "styled-components";
 
 export const Wrapper = styled.section`
     max-width: 1500px;
-    margin: 0 auto;
+    margin: 20px auto;
     min-height: 80vh;
     padding: 0 10px;
-    margin: 0 0 20px 0;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         min-height: 60vh;
