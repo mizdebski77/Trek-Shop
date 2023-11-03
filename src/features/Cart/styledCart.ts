@@ -26,7 +26,7 @@ export const ProductTile = styled.div`
     background: rgba(113, 113, 113, 0.09);
     padding: 40px 20px;
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1fr;
     max-height: 280px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
@@ -37,6 +37,9 @@ export const ProductTile = styled.div`
 export const TextWrapper = styled.div`
     display: grid;
     gap: 10px;
+    justify-content: center;
+    text-align: center;
+    max-height: 140px;
 `;
 
 export const ImageWrapper = styled.div`
@@ -45,14 +48,13 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Image = styled.img`
-    width: 160px;
-    height: 160px;
+    max-width: 120px;
     margin: 0 auto;
+    width: 100%;  
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
-        max-width: 140px;
-        width: 100%;
-        
+        max-width: 100px;
+        width: 100%;  
     };
 `;
 
@@ -107,14 +109,15 @@ export const ProductSize = styled.h4`
 `;
 
 export const PriceWrapper = styled.div`
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: space-between;
-    max-width: 70%;
+
 
     @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
-        max-width: 100%;
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 10px;
     };
 `;
 
@@ -123,9 +126,11 @@ export const ProductPrice = styled.h5`
     font-size: 24px;
     font-weight: 400;
     margin: 0;
+    text-align: left;
 
-    @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
         font-size: 20px;
+        text-align: center;
     };
 `;
 
@@ -133,6 +138,10 @@ export const ProductCount = styled.div`
     display: flex;
     gap: 10px;
     align-items: center;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
+        justify-content:center;
+    };
 `;
 
 export const CountButton = styled.button`
