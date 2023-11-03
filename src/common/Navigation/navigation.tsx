@@ -3,7 +3,7 @@ import { Caption, IconsWrapper, ImagesWrapper, LinksWrapper, Logo, LogoSpan, Mob
 import { links } from './links';
 import account from '../Images/accountSVG.svg';
 import cart from '../Images/cartSVG.svg';
-import Hamburger from 'hamburger-react';
+import { Divide as Hamburger } from 'hamburger-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { mobileNavAnimation } from '../../core/animations';
 import { scrollTop } from '../../core/scrollTop';
@@ -19,13 +19,18 @@ export const Navigation = () => {
         setPhoneNavbar(!phoneNavbar);
     };
 
+    const onLinkClick = () => {
+        togglePhoneNavbar();
+        window.scrollTo(0, 0);
+    };
+
 
     return (
         <>
             <Wrapper>
                 <Logo to='/Home' onClick={() => scrollTop()}>TREK<LogoSpan>Shop</LogoSpan></Logo>
                 <PhoneNavbar onClick={togglePhoneNavbar}>
-                    <Hamburger color='#7E8B56' size={28} />
+                    <Hamburger color='#7E8B56' size={28} toggled={phoneNavbar} />
                 </PhoneNavbar>
 
                 <LinksWrapper>
@@ -62,13 +67,14 @@ export const Navigation = () => {
                         animate={phoneNavbar ? "visible" : "hidden"}
                         exit="hidden"
                         variants={mobileNavAnimation}
+
                     >
                         <PhoneLinksWrapper>
                             {links.map((link, index) => (
                                 <NaviLink
                                     key={index}
                                     to={link.link}
-                                    onClick={() => scrollTop}
+                                    onClick={togglePhoneNavbar}
                                 >
                                     {link.text}
                                 </NaviLink>
@@ -76,12 +82,22 @@ export const Navigation = () => {
                         </PhoneLinksWrapper>
 
                         <MobileIconsWrapper>
-                            <ImagesWrapper to='/cart'>
+                            <ImagesWrapper to='/Log-In'
+                                onClick={() => {
+                                    onLinkClick();
+                                    window.scrollTo(0, 0)
+                                }}
+                            >
                                 <SvgImage src={account} />
                                 <Caption>Account</Caption>
                             </ImagesWrapper>
 
-                            <ImagesWrapper to='/cart'>
+                            <ImagesWrapper to='/Cart'
+                                onClick={() => {
+                                    onLinkClick();
+                                    togglePhoneNavbar();
+                                }}
+                            >
                                 {products.length > 0 && (
                                     <NumberOfProducts>
                                         {products.length}
