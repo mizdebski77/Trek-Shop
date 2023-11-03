@@ -28,7 +28,7 @@ export const Navigation = () => {
     return (
         <>
             <Wrapper>
-                <Logo to='/Home' onClick={() => scrollTop()}>TREK<LogoSpan>Shop</LogoSpan></Logo>
+                <Logo to='/Home' onClick={() => { setPhoneNavbar(false); window.scrollTo(0, 0); }}>TREK<LogoSpan>Shop</LogoSpan></Logo>
                 <PhoneNavbar onClick={togglePhoneNavbar}>
                     <Hamburger color='#7E8B56' size={28} toggled={phoneNavbar} />
                 </PhoneNavbar>
@@ -57,7 +57,7 @@ export const Navigation = () => {
                         <Caption>Cart</Caption>
                     </ImagesWrapper>
                 </IconsWrapper>
-            </Wrapper>
+            </Wrapper >
 
             <AnimatePresence>
                 {phoneNavbar && (

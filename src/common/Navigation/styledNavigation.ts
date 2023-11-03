@@ -189,4 +189,8 @@ export const MobileIconsWrapper = styled.div`
     gap: 40px;
     background: #e8e8e8;
     padding: 20px 10px;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
+        padding: 10px;
+    };
 `;
