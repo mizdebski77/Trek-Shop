@@ -24,6 +24,7 @@ export const TextWrapper = styled.div`
     background: rgba(255,255,255, 0.6);
     padding: 64px;
     position: absolute;
+    z-index: 10;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.firstBP}px){
         padding: 10px;
