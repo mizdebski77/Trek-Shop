@@ -164,7 +164,7 @@ export const Price = styled.h3`
 
 export const Button = styled.button`
     font-size: 32px;
-    padding: 4px 32px;
+    padding: 10px 32px;
     border-radius: 20px;
     background: rgba(71, 82, 40, 0.71);
     color: white;
@@ -197,6 +197,7 @@ export const ShortDescription = styled.span`
     color: rgba(103, 99, 96, 0.96);
     font-size: 24px;
     font-weight: 400;
+    text-align: justify;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         font-size: 16px;
@@ -287,6 +288,7 @@ export const Description = styled.span`
     color: rgba(255, 255, 255, 0.96);
     font-size: 24px;
     font-weight: 400;
+    text-align: justify;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         font-size: 16px;

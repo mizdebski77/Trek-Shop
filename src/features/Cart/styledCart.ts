@@ -51,6 +51,8 @@ export const Image = styled.img`
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         max-width: 140px;
+        width: 100%;
+        
     };
 `;
 
@@ -112,6 +114,7 @@ export const PriceWrapper = styled.div`
 
     @media (max-width: ${({ theme }) => theme.breakPoint.secondBP}px){
         max-width: 100%;
+        flex-direction: column;
     };
 `;
 

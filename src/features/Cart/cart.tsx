@@ -51,7 +51,6 @@ export const Cart = () => {
                                             {product.name}
                                         </ProductTitle>
                                         <ProductDescription>{product.description}</ProductDescription>
-                                        <ProductSize>Size: M</ProductSize>
                                         <PriceWrapper>
                                             <ProductPrice>{product.price} €</ProductPrice>
                                             <ProductCount>

@@ -54,7 +54,8 @@ export const Caption = styled.h4`
     margin: 0;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
-        font-size: 24px;
+        font-size: 20px;
+        letter-spacing: 1px;
     };
 `;
 

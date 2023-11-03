@@ -127,7 +127,7 @@ export const FiltersWrapper = styled.div`
     gap: 40px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
-        gap: 10px;
+        gap: 14px;
         padding: 10px;
         display: grid;
         justify-content: center;
