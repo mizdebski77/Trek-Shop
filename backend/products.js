@@ -103,7 +103,7 @@ const products = {
             longDescription: "The TrailSeeker 35 is the perfect choice for trekkers who value lightweight design and functionality. With a 35-liter capacity, it provides ample space for your essentials. This backpack features multiple pockets, including a dedicated hydration reservoir sleeve. The adjustable shoulder straps ensure a comfortable fit for long hikes. Embark on your adventures with this reliable backpack. Prices start at 40.50 euros. Whether you are a seasoned trekker or a novice, the TrailSeeker 35 is designed to meet your needs. Its lightweight design won't weigh you down on the trail, and the 35-liter capacity allows you to carry all your gear without feeling burdened. The dedicated hydration reservoir sleeve ensures you stay hydrated throughout your journey. The adjustable shoulder straps are designed for long hikes, reducing strain and ensuring a comfortable fit. The TrailSeeker 35 is not just a backpack; it's a reliable companion for your outdoor adventures. Starting at just 40.50 euros, it offers great value for a high-quality trekking backpack. It's time to gear up and hit the trails with the TrailSeeker 35 by your side.",
             mediumDescription: "The TrailSeeker 35, a lightweight 35L backpack, combines functionality and comfort. It features a hydration reservoir sleeve and adjustable shoulder straps.",
             price: 40.50,
-            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952268/TrekShop/BackPacks/4_fchr9b.png'
+            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952250/TrekShop/BackPacks/5_r9jh70.png'
         },
         {
             id: "1dg32csasa",
@@ -158,7 +158,7 @@ const products = {
             longDescription: "The LiteTrail Trekker 30 is the ideal choice for trekkers who prefer a lightweight and compact design. With a 30-liter capacity, it offers just enough space for your essentials. This backpack features multiple pockets, including a dedicated hydration reservoir sleeve. The adjustable shoulder straps ensure a comfortable fit for shorter hikes. Embark on your outdoor journeys with this nimble backpack. Prices start at 7.49 euros. If you're a trekker who values a lightweight and compact design, the LiteTrail Trekker 30 is the perfect choice. With a 30-liter capacity, it provides just enough space for your essentials without adding unnecessary weight. The multiple pockets, including a dedicated hydration reservoir sleeve, help you stay organized on the trail. Adjustable shoulder straps ensure a comfortable fit, making it ideal for shorter hikes and nimble adventures. Starting at just 7.49 euros, the LiteTrail Trekker 30 offers excellent value for trekkers seeking a nimble and efficient backpack. It's time to hit the trails with a lightweight companion by your side.",
             mediumDescription: "The LiteTrail Trekker 30 is a lightweight and compact 30L backpack. It's perfect for shorter hikes and nimble adventures with multiple pockets.",
             price: 7.49,
-            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952242/TrekShop/BackPacks/8_slwh8c.png'
+            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952250/TrekShop/BackPacks/5_r9jh70.png'
         },
         {
             id: "1dgs43dwgfa",
@@ -202,7 +202,7 @@ const products = {
             longDescription: "The LightTrail Trekker 40 is perfect for trekkers who prioritize a lightweight and compact design. With a 40-liter capacity, it offers just enough space for your essentials. This backpack features multiple pockets, including a dedicated hydration reservoir sleeve. The adjustable shoulder straps ensure a comfortable fit for shorter hikes. Embark on your outdoor journeys with this nimble backpack. Prices start at 9.99 euros. If you're a trekker who values a lightweight and compact design, the LightTrail Trekker 40 is the ideal choice. With a 40-liter capacity, it provides just enough space for your essentials without adding unnecessary weight. The multiple pockets, including a dedicated hydration reservoir sleeve, help you stay organized on the trail. Adjustable shoulder straps ensure a comfortable fit, making it ideal for shorter hikes and nimble adventures. Starting at just 9.99 euros, the LightTrail Trekker 40 offers great value for trekkers seeking a nimble and efficient backpack. It's time to hit the trails with a lightweight companion by your side.",
             mediumDescription: "The LightTrail Trekker 40 is perfect for trekkers valuing a lightweight and compact design. It offers 40L storage and features multiple pockets.",
             price: 9.99,
-            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952242/TrekShop/BackPacks/8_slwh8c.png'
+            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1699003230/TrekShop/BackPacks/pngwing.com_14_zoiyhx.png'
         },
     ],
 
