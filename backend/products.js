@@ -150,17 +150,6 @@ const products = {
             image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952255/TrekShop/BackPacks/2_hrgmhd.png'
         },
         {
-            id: "1dg434bvsa",
-            name: "LiteTrail Trekker 30",
-            capacity: 30,
-            category: "Backpacks",
-            description: "Lightweight 30L trekking companion.",
-            longDescription: "The LiteTrail Trekker 30 is the ideal choice for trekkers who prefer a lightweight and compact design. With a 30-liter capacity, it offers just enough space for your essentials. This backpack features multiple pockets, including a dedicated hydration reservoir sleeve. The adjustable shoulder straps ensure a comfortable fit for shorter hikes. Embark on your outdoor journeys with this nimble backpack. Prices start at 7.49 euros. If you're a trekker who values a lightweight and compact design, the LiteTrail Trekker 30 is the perfect choice. With a 30-liter capacity, it provides just enough space for your essentials without adding unnecessary weight. The multiple pockets, including a dedicated hydration reservoir sleeve, help you stay organized on the trail. Adjustable shoulder straps ensure a comfortable fit, making it ideal for shorter hikes and nimble adventures. Starting at just 7.49 euros, the LiteTrail Trekker 30 offers excellent value for trekkers seeking a nimble and efficient backpack. It's time to hit the trails with a lightweight companion by your side.",
-            mediumDescription: "The LiteTrail Trekker 30 is a lightweight and compact 30L backpack. It's perfect for shorter hikes and nimble adventures with multiple pockets.",
-            price: 7.49,
-            image: 'https://res.cloudinary.com/dvthntenm/image/upload/v1696952250/TrekShop/BackPacks/5_r9jh70.png'
-        },
-        {
             id: "1dgs43dwgfa",
             name: "SummitHiker Trekking 45",
             capacity: 45,
