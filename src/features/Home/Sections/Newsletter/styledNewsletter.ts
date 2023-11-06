@@ -39,7 +39,7 @@ export const Caption = styled.h5`
     };
 `;
 
-export const SendForm = styled.div`
+export const SendForm = styled.form`
     display: flex;
     gap: 20px;
     justify-content: center;
