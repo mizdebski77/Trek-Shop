@@ -31,6 +31,7 @@ export const ProductTile = styled.div`
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         padding: 20px 10px;
+        max-height: none;
     };
 `;
 
