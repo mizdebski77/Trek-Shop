@@ -57,6 +57,8 @@ export const ProductTile = styled(Link)`
     padding: 40px 20px;
     transition: 0.3s;
     text-decoration: none;
+    border: 2px solid rgba(126, 139, 86, 0.70);
+
 
     &:hover {
         transform: scale(1.01);

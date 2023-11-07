@@ -14,6 +14,8 @@ export const ProductTile = styled.div`
     grid-template-columns: 1fr 1fr;
     padding: 40px;
     align-items: center;
+     border: 2px solid rgba(126, 139, 86, 0.70);
+
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
         grid-template-columns: 1fr;

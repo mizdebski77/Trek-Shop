@@ -7,7 +7,7 @@ export const Loader = () => {
         <Wrapper>
             <Spinner src={spinner} />
             <Title>
-                Loading ...
+                Data download ...
             </Title>
         </Wrapper>
     );
