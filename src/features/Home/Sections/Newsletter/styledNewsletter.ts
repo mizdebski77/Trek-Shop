@@ -39,20 +39,21 @@ export const Caption = styled.h5`
     };
 `;
 
-export const SendForm = styled.form`
+export const SendForm = styled.div`
     display: flex;
     gap: 20px;
     justify-content: center;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px){
-        display: grid;
-        gap: 10px;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
     };
 `;
 
 export const Input = styled.input`
     padding: 12px;
-    max-width: 320px;
     font-size: 20px;
 
     &:focus{

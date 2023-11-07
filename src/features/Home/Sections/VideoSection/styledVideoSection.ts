@@ -15,6 +15,10 @@ export const Wrapper = styled.section`
 export const Video = styled.video`
     width: 100%;
     object-fit: contain;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBP}px){
+        width: 140%;
+    };
 `;
 
 export const TextWrapper = styled.div`
