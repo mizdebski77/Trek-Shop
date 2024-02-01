@@ -19,7 +19,7 @@ export const Title = styled.h1`
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileBP}px) {
         font-size: 20px;
-    }
+    };
 `;
 
 export const Image = styled.img`
